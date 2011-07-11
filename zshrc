@@ -1,8 +1,8 @@
 # Set promt
 PROMPT="[%n@%B%M%b %~]$ "
-autoload -Uz vcs_info
 
 # Print branch information
+autoload -Uz vcs_info
 zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[%b]"
 precmd() {
   vcs_info 'prompt'
@@ -169,3 +169,4 @@ fi
 # File associations
 alias -s {avi,mkv}=vlc
 alias -s {png,jpg,jpeg,gif,svg}=viewnior
+alias -s {pdf,djvu}=evince
