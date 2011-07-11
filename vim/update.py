@@ -29,7 +29,7 @@ def git_work():
   for arg in git:
     # Remove old directories 
     try:
-      gitpath = path.join('~/.vim/bundle', arg[1])
+      gitpath = path.join('bundle', arg[1])
       rmtree(gitpath)
       print('Removed old dir:', gitpath)
     except OSError:
