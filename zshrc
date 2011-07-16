@@ -121,6 +121,28 @@ myip () {
   wget -O - -q icanhazip.com
 }
 
+# Android FTP share
+function mount_android {
+  mkdir -p ~/android
+  curlftpfs 192.168.1.$1:$2 ~/android -o user=$3:$4
+}
+
+function unmount_android {
+  fusermount -u ~/android
+  rm -rf ~/android
+}
+
+# Netbook SSH share
+function mount_netbook {
+  mkdir -p ~/netbook
+  sshfs 192.168.1.$1:$2 ~/netbook 
+}
+
+function unmount_netbook {
+  fusermount -u ~/netbook
+  rm -rf ~/netbook
+}
+
 # Paint man pages
 export LESS_TERMCAP_mb=$'\033[01;31m'
 export LESS_TERMCAP_md=$'\033[01;31m'
@@ -153,8 +175,10 @@ alias shut='sudo shutdown -h now'
 if [[ $HOST = "desktop" ]]
   then 
     alias captst='captstatusui -P LBP3010'
-    alias mntnet='mkdir -p ~/netbook && sshfs netbook:/home/ming ~/netbook'
-    alias umntnet='fusermount -u ~/netbook && rm -rf ~/netbook'
+    alias mntnet='mount_netbook'
+    alias umntnet='unmount_netbook'
+    alias mntandr='mount_android'
+    alias umntandr='unmount_android'
     alias istat='vnstat -i eth0 -m'
   else if [[ $HOST = "netbook" ]]
     alias istat='vnstat -i wlan0 -m'
