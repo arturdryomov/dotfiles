@@ -21,6 +21,7 @@ git = (
   ('https://github.com/tyru/nextfile.vim.git','nextfile'),
   ('https://github.com/godlygeek/tabular.git','tabular'),
   ('https://github.com/ervandew/supertab.git', 'supertab'),
+  ('https://github.com/Rip-Rip/clang_complete.git', 'clang'),
 )
 
 # Code about work with Git

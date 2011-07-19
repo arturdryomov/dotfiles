@@ -109,6 +109,8 @@ call pathogen#helptags()
 let g:SuperTabDefaultCompletionType = "context"
 " Set dictionary for Pydiction
 let g:pydiction_location = '~/.vim/bundle/pydict/complete-dict'
+" Configure Clang
+let g:clang_complete_auto = 0
 
   " GVim
  
