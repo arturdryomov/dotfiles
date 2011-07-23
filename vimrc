@@ -37,6 +37,8 @@ set laststatus=2
 set wildmode=longest,full 
 " Get wildmenu work
 set wildmenu
+" Highlight long lines
+set colorcolumn=80 
 
   " Search
 
