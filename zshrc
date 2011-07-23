@@ -135,7 +135,7 @@ function unmount_android {
 # Netbook SSH share
 function mount_netbook {
   mkdir -p ~/netbook
-  sshfs 192.168.1.$1:$2 ~/netbook 
+  sshfs 192.168.1.$1:/home/ming -p $2 ~/netbook 
 }
 
 function unmount_netbook {
