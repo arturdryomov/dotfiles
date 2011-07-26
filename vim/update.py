@@ -22,6 +22,7 @@ git = (
   ('https://github.com/godlygeek/tabular.git','tabular'),
   ('https://github.com/ervandew/supertab.git', 'supertab'),
   ('https://github.com/Rip-Rip/clang_complete.git', 'clang'),
+  ('https://github.com/superjudge/tasklist-pathogen.git', 'tasklist'),
 )
 
 # Code about work with Git
