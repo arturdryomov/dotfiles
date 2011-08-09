@@ -16,5 +16,5 @@ if [ -f /usr/bin/vim ]; then
   link vim
   link vimrc
   echo ":: Downloading Vim plugins"
-  cd vim && python update.py
+  python vim/update.py
 fi
