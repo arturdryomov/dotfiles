@@ -167,7 +167,6 @@ alias yas='yaourt -S'
 alias yass='yaourt -Ss'
 alias yasyu='yaourt -Syu --aur'
 alias xres='xrdb -merge ~/.Xresources'
-alias make='colormake'
 alias reboot='sudo shutdown -r now'
 alias shut='sudo shutdown -h now'
 

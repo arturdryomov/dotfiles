@@ -63,6 +63,9 @@ set shiftwidth=2
 set autoindent
 " Enable smart indent
 set smartindent
+" Specific for Python
+au FileType python setl shiftwidth=4 tabstop=4
+
 
   " Editing
 
@@ -109,10 +112,10 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 " Configure SuperTab
 let g:SuperTabDefaultCompletionType = "context"
-" Set dictionary for Pydiction
-let g:pydiction_location = '~/.vim/bundle/pydict/complete-dict'
 " Configure Clang
 let g:clang_complete_auto = 0
+" Ignore default SnipMate snippets
+let g:snippets_dir = "~/.vim/snippets"
 
   " GVim
  
@@ -136,4 +139,3 @@ endif
 if has("gui_running")
   set lines=30 columns=100
 endif
-
