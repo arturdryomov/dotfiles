@@ -28,7 +28,6 @@ def remove_old_plugins():
     for plugin_name in plugins.keys():
         plugin_path = os.path.join(vim_path, "bundle", plugin_name)
         plugin_path = os.path.expanduser(plugin_path)
-        print(plugin_path)
         shutil.rmtree(plugin_path, ignore_errors=True)
 
 
@@ -40,6 +39,7 @@ def get_new_plugins():
         plugin_path = os.path.join(vim_path, "bundle", plugin_name)
         plugin_path = os.path.expanduser(plugin_path)
         subprocess.call(["git", "clone", plugins[plugin_name], plugin_path])
+        print()
 
 
 if __name__ == "__main__":
