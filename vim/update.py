@@ -1,51 +1,47 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+""" Vim plugins updater
+    Works with Git repos of plugins
+    Designed for work with Pathogen """
 
-# vim-bundle-mate script by jungo
-# https://github.com/jungo-git/vim-bundle-mate
-# Simplified by Ming
+import os
+import shutil
+import subprocess
 
-# Call some help
-from os import path
-from shutil import rmtree
-from subprocess import Popen
+vim_path = "~/.vim"
 
-# Repos list
-# Format: (repository, plugin name)
-git = (
-  ('https://github.com/msanders/snipmate.vim.git','snipmate'),
-  ('https://github.com/scrooloose/nerdcommenter.git','nerd-commenter'),
-  ('https://github.com/scrooloose/nerdtree.git','nerd-tree'),
-  ('https://github.com/wzzrd/vim-matchit.git','matchit'),
-  ('https://github.com/sjl/gundo.vim.git','gundo'),
-  ('https://github.com/tyru/nextfile.vim.git','nextfile'),
-  ('https://github.com/godlygeek/tabular.git','tabular'),
-  ('https://github.com/ervandew/supertab.git', 'supertab'),
-  ('https://github.com/Rip-Rip/clang_complete.git', 'clang'),
-  ('https://github.com/superjudge/tasklist-pathogen.git', 'tasklist'),
-)
+plugins = {
+    "snipmate": "git://github.com/msanders/snipmate.vim.git",
+    "nerd-commenter": "git://github.com/scrooloose/nerdcommenter.git",
+    "nerd-tree": "git://github.com/scrooloose/nerdtree.git",
+    "machit": "git://github.com/wzzrd/vim-matchit.git",
+    "gundo": "git://github.com/sjl/gundo.vim.git",
+    "nextfile": "git://github.com/tyru/nextfile.vim.git",
+    "tabular": "git://github.com/godlygeek/tabular.git",
+    "supertab": "git://github.com/ervandew/supertab.git",
+    "clang": "git://github.com/Rip-Rip/clang_complete.git",
+    "tasklist": "git://github.com/superjudge/tasklist-pathogen.git"
+}
 
-# Code about work with Git
-def git_work():
-  global git
-  for arg in git:
-    # Remove old directories 
-    try:
-      gitpath = path.join('bundle', arg[1])
-      rmtree(gitpath)
-      print('Removed old dir:', gitpath)
-    except OSError:
-      pass
-    # Clone plugins with Git
-    cmd = 'git clone ' + arg[0] + ' ' + gitpath
-    Popen(cmd, shell=True).communicate()
-    # Remove Git information
-    print('Removing .git folder in', gitpath)
-    try:
-      rmtree(path.join(gitpath, '.git'))
-    except OSError:
-      pass
-    print()
 
-# Main block
-git_work()
+def remove_old_plugins():
+    """ Removes old plugins in Vim folder
+        Directories of plugins formed from plugin names """
+    for plugin_name in plugins.keys():
+        plugin_path = os.path.join(vim_path, "bundle", plugin_name)
+        plugin_path = os.path.expanduser(plugin_path)
+        print(plugin_path)
+        shutil.rmtree(plugin_path, ignore_errors=True)
+
+
+def get_new_plugins():
+    """ Clones new plugins into Vim folder
+        Directories of plugins formed from plugin names
+        Git URLs formed from values of "plugins" dict """
+    for plugin_name in plugins.keys():
+        plugin_path = os.path.join(vim_path, "bundle", plugin_name)
+        plugin_path = os.path.expanduser(plugin_path)
+        subprocess.call(["git", "clone", plugins[plugin_name], plugin_path])
+
+
+if __name__ == "__main__":
+    remove_old_plugins()
+    get_new_plugins()
