@@ -1,14 +1,17 @@
+#!/usr/bin/env python3
+
 """ Vim plugins updater
-    Works with Git repos of plugins
+    Works with plugins Git repos
     Designed for work with Pathogen """
 
 import os
 import shutil
 import subprocess
 
-vim_path = "~/.vim"
 
-plugins = {
+VIM_PATH = "~/.vim"
+
+PLUGINS = {
     "snipmate": "git://github.com/msanders/snipmate.vim.git",
     "nerd-commenter": "git://github.com/scrooloose/nerdcommenter.git",
     "nerd-tree": "git://github.com/scrooloose/nerdtree.git",
@@ -18,30 +21,42 @@ plugins = {
     "tabular": "git://github.com/godlygeek/tabular.git",
     "supertab": "git://github.com/ervandew/supertab.git",
     "clang": "git://github.com/Rip-Rip/clang_complete.git",
-    "tasklist": "git://github.com/superjudge/tasklist-pathogen.git"
+    "tasklist": "git://github.com/superjudge/tasklist-pathogen.git",
+    "surround": "git://github.com/tpope/vim-surround.git",
+    "closetag": "git://github.com/vim-scripts/closetag.vim.git"
 }
 
 
 def remove_old_plugins():
-    """ Removes old plugins in Vim folder
-        Directories of plugins formed from plugin names """
-    for plugin_name in plugins.keys():
-        plugin_path = os.path.join(vim_path, "bundle", plugin_name)
-        plugin_path = os.path.expanduser(plugin_path)
+    """ Removes old plugins in Vim folder """
+    for plugin_name in PLUGINS.keys():
+        plugin_path = get_plugin_path(plugin_name)
         shutil.rmtree(plugin_path, ignore_errors=True)
 
 
 def get_new_plugins():
     """ Clones new plugins into Vim folder
-        Directories of plugins formed from plugin names
-        Git URLs formed from values of "plugins" dict """
-    for plugin_name in plugins.keys():
-        plugin_path = os.path.join(vim_path, "bundle", plugin_name)
-        plugin_path = os.path.expanduser(plugin_path)
-        subprocess.call(["git", "clone", plugins[plugin_name], plugin_path])
+        Git URLs formed from values of PLUGINS dict """
+    for plugin_name in PLUGINS.keys():
+        plugin_path = get_plugin_path(plugin_name)
+        subprocess.call(["git", "clone", PLUGINS[plugin_name], plugin_path])
         print()
 
 
-if __name__ == "__main__":
+def get_plugin_path(plugin_name):
+    """ Return full plugin path using it's name
+        Needs plugin name for input, returns string path
+        Uses VIM_PATH variable for construction """
+    plugin_path = os.path.join(VIM_PATH, "bundle", plugin_name)
+    plugin_path = os.path.expanduser(plugin_path)
+    return plugin_path
+
+
+def main():
+    """ Main function of script, runs other functions """
     remove_old_plugins()
     get_new_plugins()
+
+
+if __name__ == "__main__":
+    main()
