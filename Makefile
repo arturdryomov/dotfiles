@@ -12,6 +12,7 @@ install:
 	@ln -sf $(CURDIR)/.vimrc $(HOME)/.
 	@ln -sf $(CURDIR)/.vim $(HOME)/.
 	@ln -sf $(CURDIR)/.zshrc $(HOME)/.
+	@ln -sf $(CURDIR)/.gitconfig $(HOME)/.
 	make post-install
 
 post-install:
@@ -23,3 +24,4 @@ clean:
 	@rm -rf $(HOME)/.vimrc
 	@rm -rf $(HOME)/.vim
 	@rm -rf $(HOME)/.zshrc
+	@rm -rf $(HOME)/.gitconfig
