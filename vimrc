@@ -65,6 +65,8 @@ set autoindent
 set smartindent
 " Specific for Python
 au FileType python setl shiftwidth=4 tabstop=4
+" Specific for Makefiles
+au FileType make setl noexpandtab
 
 
   " Editing
