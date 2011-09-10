@@ -1,0 +1,55 @@
+snippet inc
+	#include <${1:stdio.h}>
+snippet incl
+	#include "${1:stdio}"
+snippet def
+	ifndef $1
+	define ${1:SOME_H}
+	endif // $1 
+snippet st
+	typedef struct t_${1:data} {
+		${2:/* data */}
+	} $1;
+snippet main
+	int main(int argc, char *argv[])
+	{
+		${1:/* code */}
+
+		return 0;
+	}
+snippet mainn
+	int main()
+	{
+		${1:/* code */}
+
+		return 0;
+	}
+snippet func
+	${1:void} ${2:function_name}(${3})
+	{
+		${4:/* code */}
+	}
+snippet if
+	if (${1:/* condition */}) {
+		${2:/* code */}
+	}
+snippet else
+	else {
+		${1}
+	}
+snippet for
+	for (${1:int i = 0; i < size; i++}) {
+		${2:/* code */}
+	}
+snippet wh
+	while (${1:/* condition */}) {
+		${2:/* code */}
+	}
+snippet do
+	do {
+		${2:/* code */}
+	} while (${1:/* condition */});
+snippet pr
+	printf("${1:%s}\n"${2});${3}
+snippet put
+	puts("${1:SPARTAAA!}");
