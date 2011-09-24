@@ -118,6 +118,8 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:clang_complete_auto = 0
 " Ignore default SnipMate snippets
 let g:snippets_dir = "~/.vim/snippets"
+" Disable colorcolumn for Conque
+au FileType conque_term setl colorcolumn=""
 
   " GVim
  

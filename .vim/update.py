@@ -23,7 +23,8 @@ PLUGINS = {
     "clang": "git://github.com/Rip-Rip/clang_complete.git",
     "tasklist": "git://github.com/superjudge/tasklist-pathogen.git",
     "surround": "git://github.com/tpope/vim-surround.git",
-    "closetag": "git://github.com/vim-scripts/closetag.vim.git"
+    "closetag": "git://github.com/vim-scripts/closetag.vim.git",
+    "conque": "git://github.com/rygwdn/vim-conque.git"
 }
 
 
