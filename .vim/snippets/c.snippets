@@ -3,9 +3,9 @@ snippet inc
 snippet incl
 	#include "${1:stdio}"
 snippet def
-	ifndef $1
-	define ${1:SOME_H}
-	endif // $1 
+	#ifndef $1
+	#define ${1:SOME_H}
+	#endif // $1 
 snippet st
 	typedef struct t_${1:data} {
 		${2:/* data */}
