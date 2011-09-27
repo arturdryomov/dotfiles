@@ -63,10 +63,12 @@ set shiftwidth=2
 set autoindent
 " Enable smart indent
 set smartindent
-" Specific for Python
+" Specific tabs for Python
 au FileType python setl shiftwidth=4 tabstop=4
-" Specific for Makefiles
+" Specific tabs for Makefiles
 au FileType make setl noexpandtab
+" Specific for TeX: disable cursor-line
+au FileType tex setl nocursorline
 
 
   " Editing
