@@ -1,6 +1,9 @@
 # Set promt
 PROMPT="[%n@%B%M%b %~]$ "
 
+# Use ccache
+export PATH="/usr/lib/ccache/bin/:$PATH"
+
 # Print branch information
 autoload -Uz vcs_info
 zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[%b]"
