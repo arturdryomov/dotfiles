@@ -103,11 +103,12 @@ vmap > >gv
 " Change current tab with Shift+Tab
 map <S-tab> <Esc>:tabnext<cr>
 imap <S-tab> <ESC>:tabnext<cr>
-" Fast running of Python scripts
-map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 " Add empty line without insert mode
 map <S-l> o<Esc>
 map <C-l> O<Esc>
+" Spellcheck
+map <F6> <Esc>:setlocal spell spelllang=ru_yo<CR>
+map <F7> <Esc>:setlocal nospell<CR>
 
   " Plugins
 
