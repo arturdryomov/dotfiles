@@ -8,7 +8,7 @@ help:
 
 install:
 	make clean
-	@echo ":: Installing config files"
+	@echo ":: Installing"
 	@ln -sf $(CURDIR)/.vimrc $(HOME)/.
 	@ln -sf $(CURDIR)/.vim $(HOME)/.
 	@ln -sf $(CURDIR)/.zshrc $(HOME)/.
@@ -18,9 +18,12 @@ install:
 post-install:
 	@echo ":: Running post-install"
 	@python $(CURDIR)/.vim/update.py
+	@mkdir -p ${CURDIR}/.vim/spell
+	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl
+	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug
 
 clean:
-	@echo ":: Removing old config files"
+	@echo ":: Cleaning"
 	@rm -rf $(HOME)/.vimrc
 	@rm -rf $(HOME)/.vim
 	@rm -rf $(HOME)/.zshrc
