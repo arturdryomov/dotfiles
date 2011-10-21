@@ -70,7 +70,6 @@ au FileType make setl noexpandtab
 " Specific for TeX: disable cursor-line
 au FileType tex setl nocursorline
 
-
   " Editing
 
 " Wrapping lines the word, not letters

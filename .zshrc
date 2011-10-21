@@ -4,6 +4,9 @@ PROMPT="[%n@%B%M%b %~]$ "
 # Use ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
+# Classic time format
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
+
 # Print branch information
 autoload -Uz vcs_info
 zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[%b]"
