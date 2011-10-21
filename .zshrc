@@ -4,6 +4,9 @@ PROMPT="[%n@%B%M%b %~]$ "
 # Use ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
+# Two threads for make
+export MAKEFLAGS=-j2
+
 # Classic time format
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
