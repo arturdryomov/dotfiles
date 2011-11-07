@@ -91,8 +91,10 @@ set mousehide
 set backspace=indent,eol,start
 " Save file as root
 command! -nargs=0 -bang W :silent! w !sudo tee % &>/dev/null
-" Show Omni for one match
-set completeopt=menuone
+" Show Omni for one match, with menu like true IDE
+set completeopt=menuone,menu,longest
+" Limit popup menu height
+set pumheight=15
 
   " Mappings
 
@@ -114,11 +116,13 @@ map <F7> <Esc>:setlocal nospell<CR>
 " Call Pathogen
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
-" Configure SuperTab
+" Aware SuperTab context completion
 let g:SuperTabDefaultCompletionType = "context"
-" Configure Clang
+" Disable auto Clang popup, use <Tab> for completion
 let g:clang_complete_auto = 0
-" Ignore default SnipMate snippets
+" Show Clang errors in the quickfix window
+let g:clang_complete_copen = 1
+" Ignore default SnipMate snippets, use own ones
 let g:snippets_dir = "~/.vim/snippets"
 " Disable colorcolumn for Conque
 au FileType conque_term setl colorcolumn=""

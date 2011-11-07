@@ -4,6 +4,9 @@ PROMPT="[%n@%B%M%b %~]$ "
 # Use ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
+# Calm down Clang and ccache
+export CCACHE_CPP2=yes
+
 # Two threads for make
 export MAKEFLAGS=-j2
 
