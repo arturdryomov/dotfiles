@@ -29,7 +29,7 @@ zle -N zle-keymap-select
 
 ## Update right prompt simple function
 function update_prompt() {
-  RPROMPT="%B${VIMODE} ${BRANCH}%b"
+  RPROMPT="%B${VIMODE}${BRANCH}%b"
 }
 
 
@@ -71,7 +71,7 @@ compinit
 setopt correct_all
 
 ## Change autocorrection question
-SPROMPT='zsh: Change '\''%R'\'' to '\''%r'\'' ? [Yes/No/Abort/Edit] '
+SPROMPT="zsh: Change "\""%R"\"" to "\""%r"\"" ? [Yes/No/Abort/Edit]"
 
 ## Ignore Ctrl+D for exit
 setopt ignore_eof
@@ -131,8 +131,8 @@ zstyle ':completion:*:descriptions' format "$fg_bold[brown] %B%d%b $reset_color"
 # Shortcuts, aliases and stuff
 
 ## Set hosts completion for ping
-knownhosts=('ya.ru' 'google.com' 'byfly.by')
-zstyle ':completion:*:(ping):*' hosts $knownhosts
+knownhosts=("ya.ru" "google.com" "byfly.by")
+zstyle ":completion:*:(ping):*" hosts $knownhosts
 
 ## Control daemons
 function start() {
@@ -189,36 +189,38 @@ export LESS_TERMCAP_ue=$'\033[0m'
 export LESS_TERMCAP_us=$'\033[01;32m'
 
 ## Code formatter (use as astyle < source > destination)
-alias astyle='astyle --style=1tbs --indent=spaces=2 --indent-switches --indent-col1-comments --pad-oper --pad-header --break-closing-brackets --add-brackets --convert-tabs --align-pointer=name'
+alias astyle="astyle --style=1tbs --indent=spaces=2 --indent-switches 
+  --indent-col1-comments --pad-oper --pad-header --break-closing-brackets 
+  --add-brackets --convert-tabs --align-pointer=name"
 
 ## Color output for some tools
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
 
 ## Aliases
-alias p='pacman-color'
-alias y='yaourt'
-alias pacrns='sudo pacman-color -Rns'
-alias yas='yaourt -S'
-alias yass='yaourt -Ss'
-alias yasyu='yaourt -Syu --aur'
-alias xres='xrdb -merge ~/.Xresources'
-alias reboot='sudo shutdown -r now'
-alias shut='sudo shutdown -h now'
+alias p="pacman-color"
+alias y="yaourt"
+alias pacrns="sudo pacman-color -Rns"
+alias yas="yaourt -S"
+alias yass="yaourt -Ss"
+alias yasyu="yaourt -Syu --aur"
+alias xres="xrdb -merge ~/.Xresources"
+alias reboot="sudo shutdown -r now"
+alias shut="sudo shutdown -h now"
 
 ## Specific aliases
 if [[ $HOST = "desktop" ]]
   then 
-    alias captst='captstatusui -P LBP3010'
-    alias mntnet='mount_netbook'
-    alias umntnet='unmount_netbook'
-    alias istat='vnstat -i eth0 -m'
+    alias captst="captstatusui -P LBP3010"
+    alias mntnet="mount_netbook"
+    alias umntnet="unmount_netbook"
+    alias istat="vnstat -i eth0 -m"
   else if [[ $HOST = "netbook" ]]
-    alias istat='vnstat -i wlan0 -m'
+    alias istat="vnstat -i wlan0 -m"
     # Make screen on the right
-    alias makerscr='xrandr --verbose --output VGA1 --auto --right-of LVDS1'
+    alias makerscr="xrandr --verbose --output VGA1 --auto --right-of LVDS1"
     # Make double screen
-    alias makedscr='xrandr --output VGA1 --auto --output LVDS1 --mode 1024x600'
+    alias makedscr="xrandr --output VGA1 --auto --output LVDS1 --mode 1024x600"
     # Disable screen on VGA
-    alias disscr='xrandr --output VGA1 --off'
+    alias disscr="xrandr --output VGA1 --off"
 fi
