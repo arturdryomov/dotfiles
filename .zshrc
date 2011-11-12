@@ -1,89 +1,121 @@
-# Set promt
+# Prompts
+
+## Set left prompt
 PROMPT="[%n@%B%M%b %~]$ "
 
-# Use ccache
-export PATH="/usr/lib/ccache/bin/:$PATH"
-
-# Calm down Clang and ccache
-export CCACHE_CPP2=yes
-
-# Two threads for make
-export MAKEFLAGS=-j2
-
-# Classic time format
-export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
-
-# Print branch information
+## Show branch name in repos directories
+BRANCH=""
 autoload -Uz vcs_info
 zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[%b]"
 precmd() {
   vcs_info 'prompt'
   if [ -n vcs_info_msg_0_ ]; then
-    RPROMPT="%B${vcs_info_msg_1_}%b"
+    BRANCH=${vcs_info_msg_1_}
   else
-    RPROMPT=""
+    BRANCH=""
   fi
+
+  update_prompt
 }
 
-# Make nice things such as /u/sh + Tab == /usr/share
+## Show current Vi mode
+VIMODE="[i]"
+function zle-keymap-select {
+  VIMODE="${${KEYMAP/vicmd/[n]}/(main|viins)/[i]}"
+  update_prompt
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+
+## Update right prompt simple function
+function update_prompt() {
+  RPROMPT="%B${VIMODE} ${BRANCH}%b"
+}
+
+
+# System configurations
+
+## Use ccache
+export PATH="/usr/lib/ccache/bin/:$PATH"
+
+## Calm down Clang and ccache
+export CCACHE_CPP2=yes
+
+## Two threads for make
+export MAKEFLAGS=-j2
+
+## Classic time format
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
+
+## Set editor
+export EDITOR="vim"
+
+## Set Python config
+export PYTHONSTARTUP=/home/ming/.pystartup
+
+
+# Editing
+
+## Use Vi bindkeys style
+bindkey -v
+
+## Activate Ctrl+R (history search) for Vi mode
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
+
+## Make nice things such as /u/sh + Tab == /usr/share
 autoload -Uz compinit
 compinit
 
-# Edit long comands with vim after Ctrl+X + Ctrl+E
-autoload -U edit-command-line
-zle -N  edit-command-line
-bindkey -M emacs "^X^E" edit-command-line 
-
-# Do not delete whole line with Ctrl+U
-bindkey \^U backward-kill-line
-
-# Correct mistakes
+## Correct mistakes
 setopt correct_all
 
-# Change autocorrection question
+## Change autocorrection question
 SPROMPT='zsh: Change '\''%R'\'' to '\''%r'\'' ? [Yes/No/Abort/Edit] '
 
-# Ignore Ctrl+D for exit
+## Ignore Ctrl+D for exit
 setopt ignore_eof
 
-# Emacs keybindings style
-bindkey -e
-
-# Set editor
-export EDITOR="vim"
-
-# Set Python config
-export PYTHONSTARTUP=/home/ming/.pystartup
-
-# Do not beep when error
+## Do not beep when error
 setopt no_beep
 
-# Cd folders without cd
+## Cd folders without cd
 setopt auto_cd
 
-# Report status of background jobs
+## Report status of background jobs
 setopt notify
 
-# Set history file
+
+# Zsh common configuration
+
+## Set history file
 HISTFILE=~/.zsh_history
-# Set number of commands in history
+
+## Set number of commands in history
 HISTSIZE=1000
-# Set number of commands in launch
+
+## Set number of commands in launch
 SAVEHIST=1000
-# Append history, do not overwrite it
+
+## Append history, do not overwrite it
 setopt append_history
-# Ignore dublicate commands
+
+## Ignore dublicate commands
 setopt hist_ignore_all_dups
-# Ignore spaces
+
+## Ignore spaces
 setopt hist_ignore_space
-# Ignore blank lines
+
+## Ignore blank lines
 setopt hist_reduce_blanks
-# Always import new commands from history
+
+## Always import new commands from history
 setopt share_history
-# Write command to history after pressing Enter
+
+## Write command to history after pressing Enter
 setopt inc_append_history 
 
-# Configure completion
+## Configure completion
 zstyle ':completion:*' completer _expand _complete _ignored
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
@@ -95,11 +127,14 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:descriptions' format "$fg_bold[brown] %B%d%b $reset_color"
 
-# Set complete hosts for ping
+
+# Shortcuts, aliases and stuff
+
+## Set hosts completion for ping
 knownhosts=('ya.ru' 'google.com' 'byfly.by')
 zstyle ':completion:*:(ping):*' hosts $knownhosts
 
-# Control daemons
+## Control daemons
 function start() {
   sudo /etc/rc.d/$1 start
 }
@@ -122,29 +157,18 @@ function status {
   printf "$stat \e[1;39m$1\e[0;0m\n"
 }
 
-# Make dir and cd to it
+## Make dir and cd to it immediately
 function mkd { 
   mkdir "$1"
   cd "$1" 
 } 
 
-# View IP
+## View IP
 myip () {
   wget -O - -q icanhazip.com
 }
 
-# Android FTP share
-function mount_android {
-  mkdir -p ~/android
-  curlftpfs 192.168.1.$1:$2 ~/android -o user=$3:$4
-}
-
-function unmount_android {
-  fusermount -u ~/android
-  rm -rf ~/android
-}
-
-# Netbook SSH share
+## Netbook SSH share
 function mount_netbook {
   mkdir -p ~/netbook
   sshfs 192.168.1.$1:/home/ming -p $2 ~/netbook 
@@ -155,7 +179,7 @@ function unmount_netbook {
   rm -rf ~/netbook
 }
 
-# Paint man pages
+## Paint man pages
 export LESS_TERMCAP_mb=$'\033[01;31m'
 export LESS_TERMCAP_md=$'\033[01;31m'
 export LESS_TERMCAP_me=$'\033[0m'
@@ -164,14 +188,14 @@ export LESS_TERMCAP_so=$'\033[01;44;33m'
 export LESS_TERMCAP_ue=$'\033[0m'
 export LESS_TERMCAP_us=$'\033[01;32m'
 
-# Code formatter (use as astyle < source > destination)
+## Code formatter (use as astyle < source > destination)
 alias astyle='astyle --style=1tbs --indent=spaces=2 --indent-switches --indent-col1-comments --pad-oper --pad-header --break-closing-brackets --add-brackets --convert-tabs --align-pointer=name'
 
-# Color output
+## Color output for some tools
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# Aliases
+## Aliases
 alias p='pacman-color'
 alias y='yaourt'
 alias pacrns='sudo pacman-color -Rns'
@@ -182,14 +206,12 @@ alias xres='xrdb -merge ~/.Xresources'
 alias reboot='sudo shutdown -r now'
 alias shut='sudo shutdown -h now'
 
-# Specific aliases
+## Specific aliases
 if [[ $HOST = "desktop" ]]
   then 
     alias captst='captstatusui -P LBP3010'
     alias mntnet='mount_netbook'
     alias umntnet='unmount_netbook'
-    alias mntandr='mount_android'
-    alias umntandr='unmount_android'
     alias istat='vnstat -i eth0 -m'
   else if [[ $HOST = "netbook" ]]
     alias istat='vnstat -i wlan0 -m'
@@ -200,8 +222,3 @@ if [[ $HOST = "desktop" ]]
     # Disable screen on VGA
     alias disscr='xrandr --output VGA1 --off'
 fi
-
-# File associations
-alias -s {avi,mkv}=vlc
-alias -s {png,jpg,jpeg,gif,svg}=viewnior
-alias -s {pdf,djvu}=evince
