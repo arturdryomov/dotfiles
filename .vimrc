@@ -133,6 +133,9 @@ map <C-l> O<Esc>
 " Spellcheck
 map <F6> <Esc>:setlocal spell spelllang=ru_yo<CR>
 map <F7> <Esc>:setlocal nospell<CR>
+" Show invisible characters
+map <F8> <Esc>:set list!<CR>
+set listchars=tab:▸\ ,eol:¬
 
   " Plugins
 
