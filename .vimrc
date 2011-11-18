@@ -40,6 +40,29 @@ set wildmenu
 " Highlight long lines
 set colorcolumn=80 
 
+  " Statusline
+ 
+" Filepath 
+set statusline=%<%f
+" Git branch
+set statusline+=\ %{fugitive#statusline()}
+" Filetype (OS match)
+set statusline+=\ [%{&ff}]
+" Encoding
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}]\ 
+" Help buffer flag
+set statusline+=%h
+" Modified flag
+set statusline+=%m
+" Readonly flag
+set statusline+=%r
+" Separator
+set statusline+=%=
+" Cursor line and column
+set statusline+=%-10.(%l,%c%)
+" Ruler percent
+set statusline+=\ %P
+
   " Search
 
 " Highlight search word
