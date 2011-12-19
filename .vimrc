@@ -148,6 +148,10 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:clang_complete_auto = 0
 " Show Clang errors in the quickfix window
 let g:clang_complete_copen = 1
+" Use libclang instead clang/clang++
+let g:clang_use_library = 1
+" Enable Clang snippets in functions
+let g:clang_snippets = 1
 " Ignore default SnipMate snippets, use own ones
 let g:snippets_dir = "~/.vim/snippets"
 " Disable colorcolumn for Conque
