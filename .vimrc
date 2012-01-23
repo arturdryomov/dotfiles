@@ -102,8 +102,8 @@ set scrolljump=5
 set scrolloff=5
 " Show incomplete command
 set showcmd
-" Always show mode
-set showmode
+" Not show mode
+set noshowmode
 " Set default encoding
 set termencoding=utf-8
 " Encodings for autocomplection
@@ -154,6 +154,10 @@ let g:clang_use_library = 1
 let g:snippets_dir = "~/.vim/snippets"
 " Disable colorcolumn for Conque
 au FileType conque_term setl colorcolumn=""
+" Change Powerline colorscheme
+let g:Powerline_colorscheme = "zenburn"
+" More beauty to Powerline with patched fonts
+let g:Powerline_symbols = "fancy"
 
   " GVim
  

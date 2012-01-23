@@ -25,7 +25,8 @@ PLUGINS = {
     "surround": "git://github.com/tpope/vim-surround.git",
     "closetag": "git://github.com/vim-scripts/closetag.vim.git",
     "conque": "git://github.com/rygwdn/vim-conque.git",
-    "fugitive": "git://github.com/tpope/vim-fugitive.git"
+    "fugitive": "git://github.com/tpope/vim-fugitive.git",
+    "powerline": "git://github.com/Lokaltog/vim-powerline.git"
 }
 
 
