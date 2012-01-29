@@ -32,14 +32,16 @@ PLUGINS = {
 
 def remove_old_plugins():
     """ Removes old plugins in Vim folder """
+
     for plugin_name in PLUGINS.keys():
         plugin_path = get_plugin_path(plugin_name)
         shutil.rmtree(plugin_path, ignore_errors=True)
 
 
-def get_new_plugins():
+def install_new_plugins():
     """ Clones new plugins into Vim folder
-        Git URLs formed from values of PLUGINS dict """
+        Git URLs are formed from values of PLUGINS dict """
+
     for plugin_name in PLUGINS.keys():
         plugin_path = get_plugin_path(plugin_name)
         subprocess.call(["git", "clone", PLUGINS[plugin_name], plugin_path])
@@ -50,6 +52,7 @@ def get_plugin_path(plugin_name):
     """ Return full plugin path using it's name
         Needs plugin name for input, returns string path
         Uses VIM_PATH variable for construction """
+
     plugin_path = os.path.join(VIM_PATH, "bundle", plugin_name)
     plugin_path = os.path.expanduser(plugin_path)
     return plugin_path
@@ -57,8 +60,9 @@ def get_plugin_path(plugin_name):
 
 def main():
     """ Main function of script, runs other functions """
+
     remove_old_plugins()
-    get_new_plugins()
+    install_new_plugins()
 
 
 if __name__ == "__main__":
