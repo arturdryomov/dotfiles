@@ -21,6 +21,7 @@ post-install:
 	@mkdir -p ${CURDIR}/.vim/spell
 	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl
 	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug
+	@rm ${CURDIR}/.vim/bundle/powerline/autoload/Powerline/Colorschemes/default.vim
 	@git clone git://gist.github.com/1665748.git ${CURDIR}/.vim/bundle/powerline/autoload/Powerline/Colorschemes
 
 clean:
