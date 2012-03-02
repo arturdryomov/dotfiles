@@ -71,7 +71,7 @@ compinit
 setopt correct_all
 
 ## Change autocorrection question
-SPROMPT="zsh: Change "\""%R"\"" to "\""%r"\"" ? [Yes/No/Abort/Edit]"
+SPROMPT="Change “%R” to “%r”? [Yes/No/Abort/Edit]: "
 
 ## Ignore Ctrl+D for exit
 setopt ignore_eof
@@ -126,6 +126,19 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:descriptions' format "$fg_bold[brown] %B%d%b $reset_color"
+
+
+# Zsh Fish-line syntax highlighting
+
+## Include plugin
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+## Hignlight brackets 
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+## Do not underline pathes
+ZSH_HIGHLIGHT_STYLES[path]=none
 
 
 # Shortcuts, aliases and stuff
