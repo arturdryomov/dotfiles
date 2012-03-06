@@ -6,7 +6,7 @@ PROMPT="[%n@%B%M%b %~]$ "
 ## Show branch name in repos directories
 BRANCH=""
 autoload -Uz vcs_info
-zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[%b]"
+zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[± %b]"
 precmd() {
   vcs_info 'prompt'
   if [ -n vcs_info_msg_0_ ]; then
