@@ -1,7 +1,7 @@
 # Prompts
 
 ## Set left prompt
-PROMPT="[%n@%B%M%b %~]$ "
+PROMPT="%B[%~] → %b"
 
 ## Show branch name in repos directories
 BRANCH=""
