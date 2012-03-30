@@ -175,7 +175,7 @@ function status {
 
 ## Make dir and cd to it immediately
 function mkd { 
-  mkdir "$1"
+  mkdir -p "$1"
   cd "$1" 
 } 
 
