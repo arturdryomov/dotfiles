@@ -1,22 +1,18 @@
 # DotFiles
 
-This repo contains number of configs I use every day. It was created for 
-easy sharing configuration between my desktop, netbook and other machines 
-I use sometimes.
+This repo contains configs that I use every day.
 
 Installation is simple:
 
 ```bash
-$ git clone git://github.com/ming13/dotfiles.git
-$ cd dotfiles
-$ make install
+git clone git://github.com/ming13/dotfiles.git
+cd dotfiles
+make install
 ```
 
 That’s all. Updating is pretty like that:
 
 ```bash
-$ git pull
-$ make install
+git pull
+make install
 ```
-
-`make install` is for cases when there are new configs or something like.
