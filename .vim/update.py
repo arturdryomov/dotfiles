@@ -27,7 +27,9 @@ PLUGINS = {
     "conque": "git://github.com/rygwdn/vim-conque.git",
     "fugitive": "git://github.com/tpope/vim-fugitive.git",
     "powerline": "git://github.com/Lokaltog/vim-powerline.git",
-    "a":"git://github.com/vim-scripts/a.vim.git"
+    "a": "git://github.com/vim-scripts/a.vim.git",
+    "easymotion": "git://github.com/Lokaltog/vim-easymotion.git",
+    "tagbar": "git://github.com/majutsushi/tagbar.git"
 }
 
 
