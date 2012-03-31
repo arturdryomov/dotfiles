@@ -10,6 +10,7 @@ install:
 	make clean
 	@echo ":: Installing"
 	@ln -sf $(CURDIR)/.vimrc $(HOME)/.
+	@ln -sf $(CURDIR)/.gvimrc $(HOME)/.
 	@ln -sf $(CURDIR)/.vim $(HOME)/.
 	@ln -sf $(CURDIR)/.zshrc $(HOME)/.
 	@ln -sf $(CURDIR)/.gitconfig $(HOME)/.
@@ -17,16 +18,22 @@ install:
 
 post-install:
 	@echo ":: Running post-install"
-	@python $(CURDIR)/.vim/update.py
+	make configure-vim
+
+configure-vim:
 	@mkdir -p ${CURDIR}/.vim/spell
 	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl
 	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug
-	@rm ${CURDIR}/.vim/bundle/powerline/autoload/Powerline/Colorschemes/default.vim
-	@git clone git://gist.github.com/1665748.git ${CURDIR}/.vim/bundle/powerline/autoload/Powerline/Colorschemes
+	@rm -rf ${CURDIR}/.vim/bundle/vundle
+	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/.vim/bundle/vundle
+	@vim +BundleInstall! +qall
+	@rm -rf ${CURDIR}/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes
+	@git clone git://gist.github.com/1665748.git ${CURDIR}/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes
 
 clean:
 	@echo ":: Cleaning"
 	@rm -rf $(HOME)/.vimrc
+	@rm -rf $(HOME)/.gvimrc
 	@rm -rf $(HOME)/.vim
 	@rm -rf $(HOME)/.zshrc
 	@rm -rf $(HOME)/.gitconfig

@@ -1,9 +1,9 @@
 [user]
-	email = me@ming13.ru
-	name = Artur Dryomov
+  email = me@ming13.ru
+  name = Artur Dryomov
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-	ui = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
