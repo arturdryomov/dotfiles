@@ -2,7 +2,7 @@ all:
 	make help
 
 help:
-	@echo "Please run as  \`make <target>' where <target> is:"
+	@echo "Please run as \`make <target>' where <target> is:"
 	@echo "  install - install config files"
 	@echo "  clean   - clean config files"
 
