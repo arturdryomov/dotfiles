@@ -18,3 +18,5 @@ au FileType conque_term setl colorcolumn=0
 let g:Powerline_colorscheme = "zenburn"
 " More beauty to the Powerline with Patched fonts
 let g:Powerline_symbols = "fancy"
+" Switch modes in Powerline faster
+set timeout timeoutlen=1000 ttimeoutlen=50
