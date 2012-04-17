@@ -1,9 +1,16 @@
 [user]
-  email = me@ming13.ru
   name = Artur Dryomov
+  email = me@ming13.ru
+
+[core]
+  editor = vim
+  pager = less
+
 [color]
-  branch = auto
-  diff = auto
-  interactive = auto
-  status = auto
   ui = auto
+
+[url "git://github.com/"]
+  insteadOf = "gh:"
+
+[url "git://gist.github.com/"]
+  insteadOf = "gist:"
