@@ -1,0 +1,16 @@
+# IntelliJ IDEA
+
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Android
+
+*.apk
+bin/
+gen/
+
+# Maven
+
+target/
