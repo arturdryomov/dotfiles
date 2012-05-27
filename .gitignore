@@ -1,3 +1,5 @@
+# Vim
+
 .vim/bundle/*
 .vim/.netrwhist
 .vim/spell/*
