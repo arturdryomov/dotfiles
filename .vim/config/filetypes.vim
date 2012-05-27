@@ -5,3 +5,5 @@ au FileType make setl noexpandtab
 au FileType tex setl nocursorline
 
 au FileType java setl noexpandtab
+
+au FileType xml setl noexpandtab
