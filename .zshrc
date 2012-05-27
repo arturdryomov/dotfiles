@@ -240,26 +240,26 @@ color_maven() {
 ## Aliases
 alias p="pacman-color"
 alias y="yaourt"
-alias pacrns="sudo pacman-color -Rns"
-alias yas="yaourt -S"
-alias yass="yaourt -Ss"
-alias yasyu="yaourt -Syu --aur"
+alias remove="sudo pacman-color -Rns"
+alias get="yaourt -S"
+alias search="yaourt -Ss"
+alias update="yaourt -Syu --aur"
 alias xres="xrdb -merge ~/.Xresources"
 alias reboot="sudo shutdown -r now"
-alias shut="sudo shutdown -h now"
-alias jsonpp="python -mjson.tool"
+alias off="sudo shutdown -h now"
 alias mvn=color_maven
 alias maven=/usr/bin/mvn
 
 ## Specific aliases
 if [[ $HOST = "desktop" ]]
   then 
-    alias captst="captstatusui -P LBP3010"
     alias mntnet="mount_netbook"
     alias umntnet="unmount_netbook"
-    alias istat="vnstat -i eth0 -m"
+    alias traffic="vnstat -i eth0 -m"
+    alias speed="slurm -i eth0"
   else if [[ $HOST = "netbook" ]]
-    alias istat="vnstat -i wlan0 -m"
+    alias traffic="vnstat -i wlan0 -m"
+    alias speed="slurm -i wlan0"
     # Make screen on the right
     alias makerscr="xrandr --verbose --output VGA1 --auto --right-of LVDS1"
     # Make double screen
