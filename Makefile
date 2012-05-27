@@ -16,11 +16,20 @@ install:
 	@ln -sf $(CURDIR)/.gitconfig $(HOME)/.
 	make post-install
 
+clean:
+	@echo ":: Cleaning"
+	@rm -rf $(HOME)/.vimrc
+	@rm -rf $(HOME)/.gvimrc
+	@rm -rf $(HOME)/.vim
+	@rm -rf $(HOME)/.zshrc
+	@rm -rf $(HOME)/.gitconfig
+
 post-install:
 	@echo ":: Running post-install"
 	make configure-vim
 
 configure-vim:
+	@echo ":: Configure Vim"
 	@mkdir -p ${CURDIR}/.vim/spell
 	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl
 	@wget -N -P ${CURDIR}/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug
@@ -29,11 +38,3 @@ configure-vim:
 	@vim +BundleInstall! +qall
 	@rm -rf ${CURDIR}/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes
 	@git clone git://gist.github.com/1665748.git ${CURDIR}/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes
-
-clean:
-	@echo ":: Cleaning"
-	@rm -rf $(HOME)/.vimrc
-	@rm -rf $(HOME)/.gvimrc
-	@rm -rf $(HOME)/.vim
-	@rm -rf $(HOME)/.zshrc
-	@rm -rf $(HOME)/.gitconfig
