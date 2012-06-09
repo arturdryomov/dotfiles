@@ -249,6 +249,7 @@ alias reboot="sudo shutdown -r now"
 alias off="sudo shutdown -h now"
 alias mvn=color_maven
 alias maven=/usr/bin/mvn
+alias translate=sdcv
 
 ## Specific aliases
 if [[ $HOST = "desktop" ]]
