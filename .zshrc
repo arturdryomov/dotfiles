@@ -250,6 +250,7 @@ alias off="sudo shutdown -h now"
 alias mvn=color_maven
 alias maven=/usr/bin/mvn
 alias translate=sdcv
+alias alsar="sudo alsactl -f /var/lib/alsa/asound.state store"
 
 ## Specific aliases
 if [[ $HOST = "desktop" ]]
