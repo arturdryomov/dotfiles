@@ -71,7 +71,7 @@ compinit
 setopt correct_all
 
 ## Change autocorrection question
-SPROMPT="Change “%R” to “%r”? [Yes/No/Abort/Edit]: "
+SPROMPT="Change “%R” to “%r”? [Yes / No / Abort / Edit]: "
 
 ## Ignore Ctrl+D for exit
 setopt ignore_eof
