@@ -12,3 +12,6 @@
 
 [advice]
   statusHints = false
+
+[alias]
+  push = push --quiet
