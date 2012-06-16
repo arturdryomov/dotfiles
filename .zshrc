@@ -38,15 +38,6 @@ zstyle ":vcs_info:*" formats "%b"
 
 # System configurations
 
-## Use ccache
-export PATH="/usr/lib/ccache/bin/:$PATH"
-
-## Calm down Clang and ccache
-export CCACHE_CPP2=yes
-
-## Two threads for make
-export MAKEFLAGS=-j2
-
 ## Classic time format
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
