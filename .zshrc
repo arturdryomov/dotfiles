@@ -3,25 +3,37 @@
 ## Set left prompt
 PROMPT="%B[%~] → %b"
 
-## Show branch name in repos directories
-BRANCH=""
-autoload -Uz vcs_info
-zstyle ':vcs_info:*:prompt:*' formats "$VCSPROMPT" "[± %b]"
+## Set right prompt
+
 precmd() {
-  vcs_info 'prompt'
-  if [ -n vcs_info_msg_0_ ]; then
-    BRANCH=${vcs_info_msg_1_}
+  set_right_prompt
+}
+
+function set_right_prompt() {
+  git_branch_name=$(git_branch)
+
+  if [ -z ${git_branch_name} ]; then
+    export RPROMPT=""
   else
-    BRANCH=""
+    export RPROMPT="%B[± ${git_branch_name}]%b"
   fi
-
-  update_prompt
 }
 
-## Update right prompt simple function
-function update_prompt() {
-  RPROMPT="%B${BRANCH}%b"
+function git_branch() {
+  vcs_info
+
+  echo ${vcs_info_msg_0_}
 }
+
+### Set up Zsh VCS module
+
+autoload -Uz vcs_info
+
+#### Allow only Git information
+zstyle ":vcs_info:*" enable git
+
+#### Print VCS information only as branch
+zstyle ":vcs_info:*" formats "%b"
 
 
 # System configurations
