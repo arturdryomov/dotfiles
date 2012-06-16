@@ -13,6 +13,7 @@ install:
 	@ln -sf $(CURDIR)/.gvimrc $(HOME)/.
 	@ln -sf $(CURDIR)/.vim $(HOME)/.
 	@ln -sf $(CURDIR)/.zshrc $(HOME)/.
+	@ln -sf $(CURDIR)/.zsh $(HOME)/.
 	@ln -sf $(CURDIR)/.gitconfig $(HOME)/.
 	@ln -sf $(CURDIR)/.gitignore_global $(HOME)/.
 	make post-install
@@ -23,6 +24,7 @@ clean:
 	@rm -rf $(HOME)/.gvimrc
 	@rm -rf $(HOME)/.vim
 	@rm -rf $(HOME)/.zshrc
+	@rm -rf $(HOME)/.zsh
 	@rm -rf $(HOME)/.gitconfig
 	@rm -rf $(HOME)/.gitignore_global
 
