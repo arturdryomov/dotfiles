@@ -9,3 +9,6 @@
 
 [color]
   ui = auto
+
+[advice]
+  statusHints = false
