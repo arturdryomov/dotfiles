@@ -47,11 +47,11 @@ export EDITOR="vim"
 ## Set Python config
 export PYTHONSTARTUP=/home/ming/.pystartup
 
-## Do not delete whole line with ^U
-bindkey \^U backward-kill-line
-
 
 # Editing
+
+## Do not delete whole line with ^U
+bindkey \^U backward-kill-line
 
 ## Make nice things such as /u/sh + Tab == /usr/share
 autoload -Uz compinit
@@ -82,10 +82,10 @@ setopt notify
 HISTFILE=~/.zsh_history
 
 ## Set number of commands in history
-HISTSIZE=1000
+HISTSIZE=10000
 
 ## Set number of commands in launch
-SAVEHIST=1000
+SAVEHIST=10000
 
 ## Append history, do not overwrite it
 setopt append_history
