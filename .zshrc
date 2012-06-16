@@ -18,18 +18,9 @@ precmd() {
   update_prompt
 }
 
-## Show current Vi mode
-VIMODE="[i]"
-function zle-keymap-select {
-  VIMODE="${${KEYMAP/vicmd/[n]}/(main|viins)/[i]}"
-  update_prompt
-  zle reset-prompt
-}
-zle -N zle-keymap-select
-
 ## Update right prompt simple function
 function update_prompt() {
-  RPROMPT="%B${VIMODE}${BRANCH}%b"
+  RPROMPT="%B${BRANCH}%b"
 }
 
 
@@ -53,15 +44,11 @@ export EDITOR="vim"
 ## Set Python config
 export PYTHONSTARTUP=/home/ming/.pystartup
 
+## Do not delete whole line with ^U
+bindkey \^U backward-kill-line
+
 
 # Editing
-
-## Use Vi bindkeys style
-bindkey -v
-
-## Activate Ctrl+R (history search) for Vi mode
-bindkey -M viins '^r' history-incremental-search-backward
-bindkey -M vicmd '^r' history-incremental-search-backward
 
 ## Make nice things such as /u/sh + Tab == /usr/share
 autoload -Uz compinit
