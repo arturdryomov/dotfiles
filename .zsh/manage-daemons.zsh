@@ -2,25 +2,27 @@
 
 ## Usage: start sshd, status sshd
 
+
 function start() {
-  sudo /etc/rc.d/$1 start
+  sudo systemctl start $1.service
 }
 
 function stop() {
-  sudo /etc/rc.d/$1 stop
+  sudo systemctl stop $1.service
 }
 
 function restart() {
-  sudo /etc/rc.d/$1 restart
+  sudo systemctl restart $1.service
 }
 
-function status {
-  if [ -f "/var/run/daemons/$1" ]
-   then
-     sign="\e[1;32m[RUNNING]"
-   else
-     sign="\e[1;31m[STOPPED]"
-   fi
+function status() {
+  systemctl status $1.service
+}
 
-  printf "${sign} \e[1;39m$1\e[0;0m\n"
+function enable() {
+  sudo systemctl enable $1.service
+}
+
+function disable() {
+  sudo systemctl disable $1.service
 }
