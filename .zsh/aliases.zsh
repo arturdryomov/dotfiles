@@ -38,4 +38,8 @@ fi
 if [ ${HOST} = "netbook" ]; then
   alias traffic="vnstat -i wlan0 -m"
   alias speed="slurm -i wlan0"
+
+  alias make-right-screen="xrandr --verbose --output VGA1 --auto --right-of LVDS1"
+  alias make-double-screen="xrandr --output VGA1 --auto --output LVDS1 --mode 1024x600"
+  alias remove-external-screen="xrandr --output VGA1 --off"
 fi
