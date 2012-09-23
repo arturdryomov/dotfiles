@@ -1,3 +1,7 @@
+# Force enable emacs-style navigation
+
+bindkey -e
+
 # Do not delete whole line with ^U
 bindkey \^U backward-kill-line
 

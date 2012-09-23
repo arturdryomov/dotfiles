@@ -22,6 +22,9 @@ alias alsa-restore="sudo alsactl -f /var/lib/alsa/asound.state store"
 
 alias translate="sdcv"
 
+### Force tmux to use 256 colors
+alias tmux="tmux -2"
+
 ### Color output
 
 alias ls="ls --color=auto"

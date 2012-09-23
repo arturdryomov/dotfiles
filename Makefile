@@ -14,6 +14,7 @@ install:
 	@ln -sf $(CURDIR)/.vim $(HOME)/.
 	@ln -sf $(CURDIR)/.zshrc $(HOME)/.
 	@ln -sf $(CURDIR)/.zsh $(HOME)/.
+	@ln -sf $(CURDIR)/.tmux.conf $(HOME)/.
 	@ln -sf $(CURDIR)/.gitconfig $(HOME)/.
 	@ln -sf $(CURDIR)/.gitignore_global $(HOME)/.
 	make post-install
@@ -25,6 +26,7 @@ clean:
 	@rm -rf $(HOME)/.vim
 	@rm -rf $(HOME)/.zshrc
 	@rm -rf $(HOME)/.zsh
+	@rm -rf $(HOME)/.tmux
 	@rm -rf $(HOME)/.gitconfig
 	@rm -rf $(HOME)/.gitignore_global
 
