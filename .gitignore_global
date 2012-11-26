@@ -10,8 +10,17 @@ classes/
 
 *.apk
 bin/
-gen/
+gen*/
 
 # Maven
 
 target/
+
+# Qt
+
+*.user
+
+# Python
+
+*.pyc
+*.pyo
