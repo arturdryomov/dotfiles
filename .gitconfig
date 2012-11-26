@@ -12,3 +12,6 @@
 
 [advice]
   statusHints = false
+
+[push]
+  default = upstream
