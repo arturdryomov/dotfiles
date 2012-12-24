@@ -2,7 +2,7 @@
 
 This repo contains configs I use every day.
 
-Installation is very simple.
+## Install
 
 ```
 $ git clone git://github.com/ming13/dotfiles.git
@@ -10,7 +10,7 @@ $ cd dotfiles
 $ make install
 ```
 
-That’s all. Updating is simple too.
+## Update
 
 ```
 $ git pull
