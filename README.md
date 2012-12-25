@@ -6,8 +6,7 @@ This repo contains configs I use every day.
 
 ```
 $ git clone git://github.com/ming13/dotfiles.git
-$ cd dotfiles
-$ make install
+$ make -C dotfiles install
 ```
 
 ## Update
