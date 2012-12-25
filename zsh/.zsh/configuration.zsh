@@ -36,7 +36,7 @@ SAVEHIST=10000
 # Append history, do not overwrite it
 setopt append_history
 
-# Ignore dublicate commands
+# Ignore duplicate commands
 setopt hist_ignore_all_dups
 
 # Ignore spaces

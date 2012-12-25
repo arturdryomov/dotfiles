@@ -1,4 +1,5 @@
 # Left prompt
+
 PROMPT="%B[%~] → %b"
 
 

@@ -4,10 +4,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Configuration
 
-## Hignlight brackets 
+## Highlight brackets 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-## Do not underline pathes
+## Do not underline paths
 ZSH_HIGHLIGHT_STYLES[path]=none
 
 ## Yellow patterns

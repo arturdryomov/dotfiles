@@ -1,8 +1,5 @@
 # Arch Linux
 
-## Usage: start sshd, status sshd
-
-
 function start() {
   sudo systemctl start $1.service
 }

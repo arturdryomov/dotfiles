@@ -15,9 +15,6 @@ alias update="yaourt -Syu --aur"
 alias off="systemctl poweroff"
 alias reboot="systemctl reboot"
 
-### Restore ALSA config after kernel upgrade (I hate Linux for such things)
-alias alsa-restore="sudo alsactl -f /var/lib/alsa/asound.state store"
-
 ## Other
 
 alias translate="sdcv"
