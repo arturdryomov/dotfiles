@@ -36,9 +36,6 @@ post-install:
 
 configure-vim:
 	@echo ":: Configure Vim"
-	@mkdir -p ${CURDIR}/vim/.vim/spell
-	@wget -N -P ${CURDIR}/vim/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.spl
-	@wget -N -P ${CURDIR}/vim/.vim/spell ftp://ftp.vim.org/pub/vim/runtime/spell/ru.utf-8.sug
 	@rm -rf ${CURDIR}/vim/.vim/bundle/vundle
 	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
 	@vim +BundleInstall! +qall

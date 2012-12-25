@@ -7,7 +7,7 @@ map <S-l> o<Esc>
 map <C-l> O<Esc>
 
 " Enable and disable spellcheck with F6 and F7
-map <F6> <Esc>:setlocal spell spelllang=ru_yo<CR>
+map <F6> <Esc>:setlocal spell spelllang=ru_yo,en<CR>
 map <F7> <Esc>:setlocal nospell<CR>
 
 " Show invisible characters with F8
