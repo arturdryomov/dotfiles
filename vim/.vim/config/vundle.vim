@@ -21,6 +21,7 @@ Bundle "vim-scripts/a.vim"
 Bundle "vim-scripts/closetag.vim"
 Bundle "tpope/vim-surround"
 Bundle "tpope/vim-fugitive"
+Bundle "nathanaelkane/vim-indent-guides"
 
 " Colorschemes
 Bundle "jnurmine/Zenburn"
