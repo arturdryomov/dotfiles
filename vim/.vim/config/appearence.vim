@@ -1,8 +1,8 @@
-set shortmess=I           " Remove welcome screnn
+set shortmess=I           " Remove welcome screen
 
 set laststatus=2          " Always show status line
 set title                 " Show filename in the window title
-set shortmess+=a          " Use nice Vim promts and flags
+set shortmess+=a          " Use nice Vim prompts and flags
 set ruler                 " Show current position
 
 set wildmode=longest,full " Configure completion in command line
