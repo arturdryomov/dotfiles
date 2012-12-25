@@ -1,5 +1,5 @@
 all:
-	make help
+	+make help
 
 help:
 	@echo "Run as \`make <target>' where <target> is:"
@@ -8,7 +8,6 @@ help:
 
 install:
 	+make clean
-	@echo ":: Installing"
 	@ln -sf $(CURDIR)/vim/.vimrc $(HOME)/.
 	@ln -sf $(CURDIR)/vim/.gvimrc $(HOME)/.
 	@ln -sf $(CURDIR)/vim/.vim $(HOME)/.
@@ -20,7 +19,6 @@ install:
 	+make post-install
 
 clean:
-	@echo ":: Cleaning"
 	@rm -rf $(HOME)/.vimrc
 	@rm -rf $(HOME)/.gvimrc
 	@rm -rf $(HOME)/.vim
@@ -31,13 +29,17 @@ clean:
 	@rm -rf $(HOME)/.gitignore
 
 post-install:
-	@echo ":: Running post-install"
-	+make configure-vim
+	+make vim-configure
 
-configure-vim:
-	@echo ":: Configure Vim"
+vim-configure:
+	+make vim-vundle
+	+make vim-powerline
+
+vim-vundle:
 	@rm -rf ${CURDIR}/vim/.vim/bundle/vundle
 	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
-	@vim +BundleInstall! +qall
+	@vim +BundleInstall! +quitall
+
+vim-powerline:
 	@rm -rf ${CURDIR}/vim/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes
 	@git clone git://gist.github.com/1665748.git ${CURDIR}/vim/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes
