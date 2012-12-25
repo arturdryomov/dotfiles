@@ -13,4 +13,6 @@ set number                " Enable line numbers
 set cursorline            " Highlight cursor line position
 set colorcolumn=80        " Highlight long lines
 
+set t_Co=256              " MOAR colors
+
 colorscheme zenburn       " Zenburn as colorscheme

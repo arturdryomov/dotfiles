@@ -6,7 +6,7 @@ runtime! config/basics.vim
 
 runtime! config/appearence.vim
 
-runtime! config/search
+runtime! config/search.vim
 
 runtime! config/tabulation.vim
 

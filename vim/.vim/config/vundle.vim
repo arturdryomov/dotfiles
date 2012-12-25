@@ -10,7 +10,6 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "honza/snipmate-snippets"
 
-Bundle "wzzrd/vim-matchit"
 Bundle "sjl/gundo.vim"
 Bundle "tyru/nextfile.vim"
 Bundle "godlygeek/tabular"
@@ -22,13 +21,11 @@ Bundle "scrooloose/nerdtree"
 Bundle "Lokaltog/vim-powerline"
 Bundle "Lokaltog/vim-easymotion"
 Bundle "vim-scripts/a.vim"
-Bundle "vim-scripts/closetag.vim"
 Bundle "tpope/vim-surround"
 Bundle "tpope/vim-fugitive"
 Bundle "nathanaelkane/vim-indent-guides"
 
 " Colorschemes
 Bundle "jnurmine/Zenburn"
-Bundle "endel/vim-github-colorscheme"
 
 filetype plugin on
