@@ -5,7 +5,11 @@ call vundle#rc()
 
 Bundle "gmarik/vundle"
 
-Bundle "msanders/snipmate.vim"
+Bundle "garbas/vim-snipmate"
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+
 Bundle "wzzrd/vim-matchit"
 Bundle "sjl/gundo.vim"
 Bundle "tyru/nextfile.vim"
