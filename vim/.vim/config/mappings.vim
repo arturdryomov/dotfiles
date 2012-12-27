@@ -6,6 +6,9 @@ vmap > >gv
 map <S-l> o<Esc>
 map <C-l> O<Esc>
 
+" Show files tree with F5
+map <F5> <Esc>:NERDTreeToggle<CR>
+
 " Enable and disable spellcheck with F6 and F7
 map <F6> <Esc>:setlocal spell spelllang=ru_yo,en<CR>
 map <F7> <Esc>:setlocal nospell<CR>
