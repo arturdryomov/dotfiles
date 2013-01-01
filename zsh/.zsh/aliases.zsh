@@ -14,12 +14,14 @@ alias update="yaourt -Syu --aur"
 
 alias off="systemctl poweroff"
 alias reboot="systemctl reboot"
+alias hide="systemctl suspend"
 
 ## Other
 
 alias translate="sdcv"
 
 ### Force tmux to use 256 colors
+
 alias tmux="tmux -2"
 
 ### Color output
