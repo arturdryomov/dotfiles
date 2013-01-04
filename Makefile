@@ -16,6 +16,7 @@ install:
 	@ln -sf $(CURDIR)/tmux/.tmux.conf $(HOME)/.
 	@ln -sf $(CURDIR)/git/.gitconfig $(HOME)/.
 	@ln -sf $(CURDIR)/git/.gitignore $(HOME)/.
+	@ln -sf $(CURDIR)/python/.pythonrc.py $(HOME)/.
 	+make post-install
 
 clean:
@@ -27,6 +28,7 @@ clean:
 	@rm -rf $(HOME)/.tmux
 	@rm -rf $(HOME)/.gitconfig
 	@rm -rf $(HOME)/.gitignore
+	@rm -rf $(HOME)/.pythonrc.py
 
 post-install:
 	+make vim-configure

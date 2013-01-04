@@ -1,8 +1,8 @@
 # Editor
 export EDITOR="vim"
 
-# Python config
-export PYTHONSTARTUP=/home/ming/.pystartup
+# Python runtime config
+export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
 # Enable virtualenvwrapper
 source virtualenvwrapper_lazy.sh
