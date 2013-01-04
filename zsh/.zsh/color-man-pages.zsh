@@ -1,5 +1,3 @@
-# Paint it red!
-
 export LESS_TERMCAP_mb=$'\033[01;31m'
 export LESS_TERMCAP_md=$'\033[01;31m'
 export LESS_TERMCAP_me=$'\033[0m'

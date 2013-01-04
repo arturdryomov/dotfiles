@@ -5,13 +5,13 @@ zstyle ":completion:*:ping:*" hosts ${known_hosts}
 
 # Make dir and cd to it immediately
 
-function mkd { 
+function mkd {
   mkdir -p "$1"
-  cd "$1" 
-} 
+  cd "$1"
+}
 
-# View IP
+# View external IP
 
-function myip () {
-  wget -O - -q icanhazip.com
+function whereami () {
+  curl http://icanhazip.com
 }

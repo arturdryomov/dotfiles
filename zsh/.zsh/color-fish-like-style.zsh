@@ -4,7 +4,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Configuration
 
-## Highlight brackets 
+## Highlight brackets
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 ## Do not underline paths
