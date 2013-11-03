@@ -25,7 +25,7 @@ clean:
 	@rm -rf $(HOME)/.vim
 	@rm -rf $(HOME)/.zshrc
 	@rm -rf $(HOME)/.zsh
-	@rm -rf $(HOME)/.tmux
+	@rm -rf $(HOME)/.tmux.conf
 	@rm -rf $(HOME)/.gitconfig
 	@rm -rf $(HOME)/.gitignore
 	@rm -rf $(HOME)/.pythonrc.py
