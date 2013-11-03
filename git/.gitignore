@@ -25,6 +25,11 @@ target/
 ## Android
 
 *.apk
+*.properties
+
+## OS X
+
+.DS_Store
 
 ## Python
 
