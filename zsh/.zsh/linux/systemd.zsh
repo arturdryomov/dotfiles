@@ -1,5 +1,3 @@
-# systemd
-
 function start() {
   sudo systemctl start $1.service
 }

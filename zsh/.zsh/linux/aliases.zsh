@@ -20,14 +20,6 @@ alias hide="systemctl suspend"
 
 alias translate="sdcv"
 
-### Force tmux to use 256 colors
-alias tmux="tmux -2"
-
-### Color output
-alias ls="ls --color=auto"
-alias grep="grep --color=auto"
-alias tree="tree -C"
-
 
 # Specific for hosts
 
