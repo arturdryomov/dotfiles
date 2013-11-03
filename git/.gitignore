@@ -1,26 +1,32 @@
-# IntelliJ IDEA
+# IDE
 
-*.iml
-*.ipr
-*.iws
+## IntelliJ IDEA
+
 .idea/
-classes/
+*.iml
 
-# Android
-
-*.apk
-bin/
-gen*/
-
-# Maven
-
-target/
-
-# Qt
+## Qt Creator
 
 *.user
 
-# Python
+# Build tools
+
+## Gradle
+
+.gradle/
+build/
+
+## Maven
+
+target/
+
+# Other
+
+## Android
+
+*.apk
+
+## Python
 
 *.pyc
 *.pyo
