@@ -35,13 +35,8 @@ post-install:
 
 vim-configure:
 	+make vim-vundle
-	+make vim-powerline
 
 vim-vundle:
 	@rm -rf ${CURDIR}/vim/.vim/bundle/vundle
 	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
 	@vim +BundleInstall! +quitall
-
-vim-powerline:
-	@rm -rf ${CURDIR}/vim/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes
-	@git clone git://gist.github.com/1665748.git ${CURDIR}/vim/.vim/bundle/vim-powerline/autoload/Powerline/Colorschemes

@@ -8,10 +8,8 @@ set guioptions-=R                   " Remove right split scrollbar
 set guioptions-=l                   " Remove left scrollbar
 set guioptions-=r                   " Remove right scrollbar
 
-if (hostname() == "desktop")        " Configure font
-  set guifont=Monospace\ 9
-endif
+set noerrorbells                    " Remove bells
+set novisualbell                    " Remove visual bells
+set vb                              " Remove sound
 
-if (hostname() == "netbook")
-  set guifont=Droid\ Sans\ Mono\ 8
-endif
+set guifont=Menlo:h12               " Set font
