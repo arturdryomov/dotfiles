@@ -1,7 +1,7 @@
 # Aliases
 
+alias maven="${MAVEN_HOME}/bin/mvn"
 alias mvn="color_maven"
-alias maven="/usr/bin/mvn"
 
 # Function
 
@@ -12,7 +12,7 @@ color_maven() {
   local TEXT_YELLOW=`tput setaf 3`
   local RESET_FORMATTING=`tput sgr0`
 
-  /usr/bin/mvn $@ | sed -e "s/\(\[INFO\]\ \-\-\-\ .*\)/${TEXT_BLUE}\1${RESET_FORMATTING}/g" \
+  maven $@ | sed -e "s/\(\[INFO\]\ \-\-\-\ .*\)/${TEXT_BLUE}\1${RESET_FORMATTING}/g" \
     -e "s/\(\[INFO\]\ \[.*\)/${RESET_FORMATTING}\1${RESET_FORMATTING}/g" \
     -e "s/\(\[INFO\]\ \)\(BUILD SUCCESS\)/\1${TEXT_GREEN}\2${RESET_FORMATTING}/g" \
     -e "s/\(\[INFO\]\ \)\(BUILD FAILURE\)/\1${TEXT_RED}\2${RESET_FORMATTING}/g" \
