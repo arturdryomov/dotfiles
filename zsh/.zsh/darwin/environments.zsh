@@ -11,7 +11,11 @@ export PATH="$BREW:$PATH"
 
 export MAVEN_HOME="/usr/local/opt/maven/"
 
-# Python virtualenv wrapper
+# Python environments
 
 export WORKON_HOME="$HOME/.python_virtualenvs"
 source "/usr/local/bin/virtualenvwrapper_lazy.sh"
+
+# Ruby environments
+
+# eval "$(rbenv init - --no-rehash zsh)"
