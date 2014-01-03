@@ -1,6 +1,9 @@
 # Editor
 export EDITOR="vim"
 
+# Less history file
+export LESSHISTFILE="$HOME/.less_history"
+
 # Python runtime config
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
