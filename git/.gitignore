@@ -30,6 +30,7 @@ target/
 ## Android
 
 *.apk
+*.keystore
 *.properties
 
 ## OS X
