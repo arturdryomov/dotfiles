@@ -8,20 +8,20 @@ HISTORY_PATH = os.path.join(os.environ["HOME"], HISTORY_FILE)
 
 
 def main():
-    read_history()
-    setup_saving_history()
+    load_history()
+    save_history()
 
 
-def read_history():
+def load_history():
     if os.path.exists(HISTORY_PATH):
         readline.read_history_file(HISTORY_PATH)
 
 
-def setup_saving_history():
-    atexit.register(save_history)
-
-
 def save_history():
+    atexit.register(write_history)
+
+
+def write_history():
     readline.write_history_file(HISTORY_PATH)
 
 
