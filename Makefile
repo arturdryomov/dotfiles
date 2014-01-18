@@ -19,7 +19,7 @@ post-install:
 	+make vim-bundle-install
 
 vim-bundle-install:
-	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
+	@git clone --quiet git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
 	@vim +BundleInstall! +quitall
 
 clean:
