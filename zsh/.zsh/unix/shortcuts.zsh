@@ -13,5 +13,5 @@ function mkd {
 # View external IP
 
 function whereami () {
-  curl http://icanhazip.com
+  curl http://ifconfig.me
 }
