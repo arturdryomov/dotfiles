@@ -1,13 +1,9 @@
 all:
-	+make help
-
-help:
-	@echo "Run as \`make <target>' where <target> is:"
-	@echo "  install - install config files"
-	@echo "  clean   - clean config files"
+	@echo "Usage: make [target]"
+	@echo "  install   install configs"
+	@echo "  clean     clean configs"
 
 install:
-	+make clean
 	@ln -sf $(CURDIR)/vim/.vimrc $(HOME)/.
 	@ln -sf $(CURDIR)/vim/.gvimrc $(HOME)/.
 	@ln -sf $(CURDIR)/vim/.vim $(HOME)/.
@@ -19,6 +15,13 @@ install:
 	@ln -sf $(CURDIR)/python/.pythonrc.py $(HOME)/.
 	+make post-install
 
+post-install:
+	+make vim-configure
+
+vim-configure:
+	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
+	@vim +BundleInstall! +quitall
+
 clean:
 	@rm -rf $(HOME)/.vimrc
 	@rm -rf $(HOME)/.gvimrc
@@ -29,14 +32,3 @@ clean:
 	@rm -rf $(HOME)/.gitconfig
 	@rm -rf $(HOME)/.gitignore
 	@rm -rf $(HOME)/.pythonrc.py
-
-post-install:
-	+make vim-configure
-
-vim-configure:
-	+make vim-vundle
-
-vim-vundle:
-	@rm -rf ${CURDIR}/vim/.vim/bundle/vundle
-	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
-	@vim +BundleInstall! +quitall
