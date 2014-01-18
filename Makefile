@@ -16,9 +16,9 @@ install:
 	+make post-install
 
 post-install:
-	+make vim-configure
+	+make vim-bundle-install
 
-vim-configure:
+vim-bundle-install:
 	@git clone git://github.com/gmarik/vundle.git ${CURDIR}/vim/.vim/bundle/vundle
 	@vim +BundleInstall! +quitall
 
@@ -32,3 +32,7 @@ clean:
 	@rm -rf $(HOME)/.gitconfig
 	@rm -rf $(HOME)/.gitignore
 	@rm -rf $(HOME)/.pythonrc.py
+	+make vim-bundle-clean
+
+vim-bundle-clean:
+	@rm -rf ${CURDIR}/vim/.vim/bundle/vundle
