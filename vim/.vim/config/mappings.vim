@@ -2,7 +2,7 @@
 vmap < <gv
 vmap > >gv
 
-" Add empty line without insert mode
+" Add empty line without insert mode with ⇧L and ⌃L
 map <S-l> o<Esc>
 map <C-l> O<Esc>
 
@@ -17,8 +17,8 @@ map <F7> <Esc>:setlocal nospell<CR>
 map <F8> <Esc>:set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+" Remove trailing whitespaces with F9
+map <F9> <ESC>:%s/\s\+$//e<CR>
+
 " Save file as root with :W
 command! -nargs=0 -bang W :silent! w !sudo tee % &>/dev/null
-
-" Remove trailing whitespaces
-map <F9> <ESC>:%s/\s\+$//e<CR>
