@@ -5,10 +5,12 @@
 alias p="pacman-color"
 alias y="yaourt"
 
-alias get="yaourt -S"
-alias remove="sudo pacman-color -Rns"
-alias search="yaourt -Ss"
-alias update="yaourt -Syu --aur"
+alias pkg-install="yaourt -S"
+alias pkg-uninstall="yaourt -Rns"
+
+alias pkg-search="yaourt -Ss"
+alias pkg-update="yaourt -Sy"
+alias pkg-upgrade="yaourt -Syu --aur"
 
 ## System
 
