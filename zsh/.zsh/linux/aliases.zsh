@@ -2,7 +2,7 @@
 
 ## Package management
 
-alias p="pacman-color"
+alias p="pacman"
 alias y="yaourt"
 
 alias pkg-install="yaourt -S"
