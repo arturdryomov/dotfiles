@@ -18,4 +18,4 @@ source "/usr/local/bin/virtualenvwrapper_lazy.sh"
 
 # Ruby environments
 
-# eval "$(rbenv init - --no-rehash zsh)"
+eval "$(rbenv init - --no-rehash zsh)"
