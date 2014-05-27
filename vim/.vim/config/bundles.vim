@@ -8,6 +8,7 @@ call neobundle#rc()
 NeoBundleFetch "shougo/neobundle.vim"
 
 NeoBundle "ervandew/supertab"
+NeoBundle "kien/rainbow_parentheses.vim"
 NeoBundle "Lokaltog/vim-powerline"
 NeoBundle "scrooloose/nerdcommenter"
 NeoBundle "scrooloose/nerdtree"
