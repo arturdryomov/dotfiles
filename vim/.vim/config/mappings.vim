@@ -10,7 +10,7 @@ map <C-l> O<Esc>
 map <F5> <Esc>:NERDTreeToggle<CR>
 
 " Enable and disable spellcheck with F6 and F7
-map <F6> <Esc>:setlocal spell spelllang=ru_yo,en<CR>
+map <F6> <Esc>:setlocal spell spelllang=ru_yo,en_us<CR>
 map <F7> <Esc>:setlocal nospell<CR>
 
 " Show invisible characters with F8
