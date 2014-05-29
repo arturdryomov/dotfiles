@@ -7,9 +7,9 @@ call neobundle#rc()
 
 NeoBundleFetch "shougo/neobundle.vim"
 
+NeoBundle "bling/vim-airline"
 NeoBundle "ervandew/supertab"
 NeoBundle "kien/rainbow_parentheses.vim"
-NeoBundle "Lokaltog/vim-powerline"
 NeoBundle "scrooloose/nerdcommenter"
 NeoBundle "scrooloose/nerdtree"
 NeoBundle "sjl/gundo.vim"
