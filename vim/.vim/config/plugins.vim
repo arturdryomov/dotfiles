@@ -7,6 +7,8 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " Airline
 
+set timeout timeoutlen=1000 ttimeoutlen=50
+
 let g:airline_left_sep = ""
 let g:airline_right_sep = ""
 
