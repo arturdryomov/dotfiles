@@ -14,6 +14,7 @@ NeoBundle "scrooloose/nerdcommenter"
 NeoBundle "scrooloose/nerdtree"
 NeoBundle "sjl/gundo.vim"
 NeoBundle "superjudge/tasklist-pathogen"
+NeoBundle "tpope/vim-endwise"
 NeoBundle "tpope/vim-fugitive"
 NeoBundle "tyru/nextfile.vim"
 
