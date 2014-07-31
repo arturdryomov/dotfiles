@@ -13,9 +13,13 @@ export MAVEN_HOME="/usr/local/opt/maven/"
 
 # Python environments
 
-export WORKON_HOME="$HOME/.python_virtualenvs"
-source "/usr/local/bin/virtualenvwrapper_lazy.sh"
+if [[ -f "/usr/local/bin/virtualenvwrapper.sh" ]]; then
+  export WORKON_HOME="$HOME/.python_virtualenvs"
+  source "/usr/local/bin/virtualenvwrapper_lazy.sh"
+fi
 
 # Ruby environments
 
-eval "$(rbenv init - --no-rehash zsh)"
+if type "rbenv" > /dev/null; then
+  eval "$(rbenv init - --no-rehash zsh)"
+fi
