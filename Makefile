@@ -13,12 +13,9 @@ install:
 	ln -sf $(CURDIR)/git/.gitconfig $(HOME)/.
 	ln -sf $(CURDIR)/git/.gitignore $(HOME)/.
 	ln -sf $(CURDIR)/python/.pythonrc.py $(HOME)/.
-	+make post-install
+	+make install-vim-bundle
 
-post-install:
-	+make vim-bundle-install
-
-vim-bundle-install:
+install-vim-bundle:
 	git clone --quiet git://github.com/shougo/neobundle.vim.git ${CURDIR}/vim/.vim/bundle/neobundle
 	${CURDIR}/vim/.vim/bundle/neobundle/bin/neoinstall
 
@@ -32,7 +29,7 @@ clean:
 	rm -rf $(HOME)/.gitconfig
 	rm -rf $(HOME)/.gitignore
 	rm -rf $(HOME)/.pythonrc.py
-	+make vim-bundle-clean
+	+make clean-vim-bundle
 
-vim-bundle-clean:
+clean-vim-bundle:
 	rm -rf ${CURDIR}/vim/.vim/bundle/
