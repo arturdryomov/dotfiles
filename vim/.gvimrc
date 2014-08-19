@@ -12,4 +12,8 @@ set noerrorbells                    " Remove bells
 set novisualbell                    " Remove visual bells
 set vb                              " Remove sound
 
-set guifont=Menlo:h12               " Set font
+if has("mac")                       " Set font
+  set guifont=Menlo:h12
+else
+  set guifont=Monospace\ 9
+endif
