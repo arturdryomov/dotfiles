@@ -31,7 +31,8 @@ target/
 
 *.apk
 *.keystore
-*.properties
+
+local.properties
 
 ## OS X
 
