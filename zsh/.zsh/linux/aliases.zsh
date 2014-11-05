@@ -22,6 +22,9 @@ alias hide="systemctl suspend"
 
 alias translate="sdcv"
 
+alias pbcopy="xsel --clipboard --input"
+alias pbpaste="xsel --clipboard --output"
+
 
 # Specific for hosts
 
