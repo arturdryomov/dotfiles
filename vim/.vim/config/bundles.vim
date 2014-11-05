@@ -2,8 +2,7 @@ if has("vim_starting")
   set runtimepath+=~/.vim/bundle/neobundle
 endif
 
-call neobundle#rc()
-
+call neobundle#begin()
 
 NeoBundleFetch "shougo/neobundle.vim"
 
@@ -25,8 +24,8 @@ NeoBundle "chriskempson/tomorrow-theme", {"rtp": "vim/"}
 NeoBundle "tfnico/vim-gradle"
 NeoBundle "tpope/vim-markdown"
 
+call neobundle#end()
 
 filetype plugin on
-
 
 NeoBundleCheck
