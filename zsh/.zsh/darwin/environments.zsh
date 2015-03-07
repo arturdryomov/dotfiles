@@ -3,6 +3,10 @@
 export BREW="/usr/local/bin:/usr/local/sbin"
 export PATH="$BREW:$PATH"
 
+# Homebrew Cask
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
+
 # Android SDK
 
 export ANDROID_HOME="/usr/local/opt/android-sdk/"
