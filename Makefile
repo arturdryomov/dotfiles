@@ -4,15 +4,16 @@ all:
 	@echo "  clean     clean configs"
 
 install:
-	ln -sf $(CURDIR)/vim/.vimrc $(HOME)/.
-	ln -sf $(CURDIR)/vim/.gvimrc $(HOME)/.
-	ln -sf $(CURDIR)/vim/.vim $(HOME)/.
-	ln -sf $(CURDIR)/zsh/.zshrc $(HOME)/.
-	ln -sf $(CURDIR)/zsh/.zsh $(HOME)/.
-	ln -sf $(CURDIR)/tmux/.tmux.conf $(HOME)/.
 	ln -sf $(CURDIR)/git/.gitconfig $(HOME)/.
 	ln -sf $(CURDIR)/git/.gitignore $(HOME)/.
 	ln -sf $(CURDIR)/python/.pythonrc.py $(HOME)/.
+	ln -sf $(CURDIR)/sqlite/.sqliterc $(HOME)/.
+	ln -sf $(CURDIR)/tmux/.tmux.conf $(HOME)/.
+	ln -sf $(CURDIR)/vim/.gvimrc $(HOME)/.
+	ln -sf $(CURDIR)/vim/.vim $(HOME)/.
+	ln -sf $(CURDIR)/vim/.vimrc $(HOME)/.
+	ln -sf $(CURDIR)/zsh/.zsh $(HOME)/.
+	ln -sf $(CURDIR)/zsh/.zshrc $(HOME)/.
 	+make install-vim-bundle
 
 install-vim-bundle:
@@ -20,15 +21,16 @@ install-vim-bundle:
 	${CURDIR}/vim/.vim/bundle/neobundle/bin/neoinstall
 
 clean:
-	rm -rf $(HOME)/.vimrc
-	rm -rf $(HOME)/.gvimrc
-	rm -rf $(HOME)/.vim
-	rm -rf $(HOME)/.zshrc
-	rm -rf $(HOME)/.zsh
-	rm -rf $(HOME)/.tmux.conf
 	rm -rf $(HOME)/.gitconfig
 	rm -rf $(HOME)/.gitignore
 	rm -rf $(HOME)/.pythonrc.py
+	rm -rf $(HOME)/.sqliterc
+	rm -rf $(HOME)/.tmux.conf
+	rm -rf $(HOME)/.gvimrc
+	rm -rf $(HOME)/.vim
+	rm -rf $(HOME)/.vimrc
+	rm -rf $(HOME)/.zsh
+	rm -rf $(HOME)/.zshrc
 	+make clean-vim-bundle
 
 clean-vim-bundle:
