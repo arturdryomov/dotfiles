@@ -14,9 +14,9 @@ install:
 	ln -sf $(CURDIR)/vim/.vimrc $(HOME)/.
 	ln -sf $(CURDIR)/zsh/.zsh $(HOME)/.
 	ln -sf $(CURDIR)/zsh/.zshrc $(HOME)/.
-	+make install-vim-bundle
+	+make post-install-vim
 
-install-vim-bundle:
+post-install-vim:
 	git clone --quiet git://github.com/shougo/neobundle.vim.git ${CURDIR}/vim/.vim/bundle/neobundle
 	${CURDIR}/vim/.vim/bundle/neobundle/bin/neoinstall
 
@@ -31,7 +31,7 @@ clean:
 	rm -rf $(HOME)/.vimrc
 	rm -rf $(HOME)/.zsh
 	rm -rf $(HOME)/.zshrc
-	+make clean-vim-bundle
+	+make post-clean-vim
 
-clean-vim-bundle:
+post-clean-vim:
 	rm -rf ${CURDIR}/vim/.vim/bundle/
