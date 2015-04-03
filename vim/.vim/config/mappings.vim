@@ -19,6 +19,3 @@ set listchars=tab:▸\ ,eol:¬
 
 " Remove trailing whitespaces with F9
 map <F9> <ESC>:%s/\s\+$//e<CR>
-
-" Save file as root with :W
-command! -nargs=0 -bang W :silent! w !sudo tee % &>/dev/null

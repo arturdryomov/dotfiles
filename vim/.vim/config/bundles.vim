@@ -8,6 +8,7 @@ NeoBundleFetch "shougo/neobundle.vim"
 
 NeoBundle "bling/vim-airline"
 NeoBundle "ervandew/supertab"
+NeoBundle "gmarik/sudo-gui.vim"
 NeoBundle "scrooloose/nerdcommenter"
 NeoBundle "scrooloose/nerdtree"
 NeoBundle "sjl/gundo.vim"
