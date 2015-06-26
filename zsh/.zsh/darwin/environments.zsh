@@ -1,7 +1,7 @@
 # Homebrew
 
-export BREW="/usr/local/bin:/usr/local/sbin"
-export PATH="$BREW:$PATH"
+export BREW_HOME="$(brew --prefix)"
+export PATH="${BREW_HOME}/bin:${BREW_HOME}/sbin:${PATH}"
 
 # Homebrew Cask
 
@@ -18,7 +18,7 @@ export MAVEN_HOME="/usr/local/opt/maven/"
 # Python environments
 
 if [[ -f "/usr/local/bin/virtualenvwrapper.sh" ]]; then
-  export WORKON_HOME="$HOME/.python_virtualenvs"
+  export WORKON_HOME="${HOME}/.python_virtualenvs"
 
   source "/usr/local/bin/virtualenvwrapper_lazy.sh"
 fi
