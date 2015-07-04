@@ -26,5 +26,5 @@ setopt auto_cd
 # Wait 10 seconts to perform rm with star
 setopt rm_star_wait
 
-# Show long-running command time after 30 seconds
-REPORTTIME=30
+# Show long-running command time after 5 minutes
+REPORTTIME=300
