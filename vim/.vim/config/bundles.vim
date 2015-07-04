@@ -22,6 +22,7 @@ NeoBundle "chriskempson/tomorrow-theme", {"rtp": "vim/"}
 " Syntax
 NeoBundle "tfnico/vim-gradle"
 NeoBundle "tpope/vim-markdown"
+NeoBundle "vim-scripts/groovy.vim"
 
 call neobundle#end()
 
