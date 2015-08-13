@@ -20,6 +20,7 @@ NeoBundle "tyru/nextfile.vim"
 NeoBundle "chriskempson/tomorrow-theme", {"rtp": "vim/"}
 
 " Syntax
+NeoBundle "markcornick/vim-vagrant"
 NeoBundle "tfnico/vim-gradle"
 NeoBundle "tpope/vim-markdown"
 NeoBundle "vim-scripts/groovy.vim"
