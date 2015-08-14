@@ -5,11 +5,10 @@
 alias p="pacman"
 alias y="yaourt"
 
-alias pkg-install="yaourt -S"
-alias pkg-uninstall="yaourt -Rns"
-alias pkg-search="yaourt -Ss"
-alias pkg-update="yaourt -Sy"
-alias pkg-upgrade="yaourt -Syu --aur"
+alias pkg-install="yaourt --sync"
+alias pkg-uninstall="yaourt --remove --recursive --nosave"
+alias pkg-search="yaourt --search --sync"
+alias pkg-upgrade="yaourt --sysupgrade --sync --refresh --aur"
 
 ## System
 
