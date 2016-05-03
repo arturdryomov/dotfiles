@@ -1,12 +1,13 @@
 if has("vim_starting")
-  set runtimepath+=~/.vim/bundle/neobundle
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin()
+call neobundle#begin(expand("~/.vim/bundle/"))
 
 NeoBundleFetch "shougo/neobundle.vim"
 
-NeoBundle "bling/vim-airline"
+NeoBundle "vim-airline/vim-airline"
+NeoBundle "vim-airline/vim-airline-themes"
 NeoBundle "ervandew/supertab"
 NeoBundle "gmarik/sudo-gui.vim"
 NeoBundle "scrooloose/nerdcommenter"
