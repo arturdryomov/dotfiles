@@ -1,21 +1,18 @@
-" Easy indent for blocks with < and >
+" < and > - easy indent for blocks
 vmap < <gv
 vmap > >gv
 
-" Add empty line without insert mode with ⇧L and ⌃L
+" o and O - empty line without insert mode
 map <S-l> o<Esc>
 map <C-l> O<Esc>
 
-" Show files tree with F5
+" F5 - show files tree
 map <F5> <Esc>:NERDTreeToggle<CR>
 
-" Enable and disable spellcheck with F6 and F7
+" F6, F7 - Enable and disable spellcheck
 map <F6> <Esc>:setlocal spell spelllang=ru_yo,en_us<CR>
 map <F7> <Esc>:setlocal nospell<CR>
 
-" Show invisible characters with F8
+" F8 - show invisible characters
 map <F8> <Esc>:set list!<CR>
 set listchars=tab:▸\ ,eol:¬
-
-" Remove trailing whitespaces with F9
-map <F9> <ESC>:%s/\s\+$//e<CR>
