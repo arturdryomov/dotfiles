@@ -1,5 +1,5 @@
 # History file
-HISTFILE=~/.zsh_history
+HISTFILE="${HOME}/.zsh_history"
 
 # Number of commands in history
 HISTSIZE=10000

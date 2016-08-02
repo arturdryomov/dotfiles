@@ -13,5 +13,5 @@ function mkd {
 # View external IP
 
 function whereami () {
-  curl http://ifconfig.me
+  curl https://ifconfig.co
 }

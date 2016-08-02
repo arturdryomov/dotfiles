@@ -9,18 +9,18 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom
 
 # Android SDK
 
-export ANDROID_HOME="/usr/local/opt/android-sdk/"
+export ANDROID_HOME="${BREW_HOME}/opt/android-sdk/"
 
 # Maven
 
-export MAVEN_HOME="/usr/local/opt/maven/"
+export MAVEN_HOME="${BREW_HOME}/opt/maven/"
 
 # Python environments
 
-if [[ -f "/usr/local/bin/virtualenvwrapper.sh" ]]; then
+if [[ -f "${BREW_HOME}/bin/virtualenvwrapper.sh" ]]; then
   export WORKON_HOME="${HOME}/.python_virtualenvs"
 
-  source "/usr/local/bin/virtualenvwrapper_lazy.sh"
+  source "${BREW_HOME}/bin/virtualenvwrapper_lazy.sh"
 fi
 
 # Ruby environments
