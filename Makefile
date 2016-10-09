@@ -17,7 +17,7 @@ install:
 	+make post-install-vim
 
 post-install-vim:
-	git clone --quiet git://github.com/shougo/neobundle.vim.git ${CURDIR}/vim/.vim/bundle/neobundle
+	git clone --quiet git://github.com/shougo/neobundle.vim.git ${CURDIR}/vim/.vim/bundle/neobundle.vim
 	${CURDIR}/vim/.vim/bundle/neobundle/bin/neoinstall
 	mkdir -p ${CURDIR}/vim/.vim/history/
 
