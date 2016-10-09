@@ -25,6 +25,7 @@ NeoBundle "chriskempson/tomorrow-theme", {"rtp": "vim/"}
 NeoBundle "markcornick/vim-vagrant"
 NeoBundle "tfnico/vim-gradle"
 NeoBundle "tpope/vim-markdown"
+NeoBundle "udalov/kotlin-vim"
 NeoBundle "vim-scripts/groovy.vim"
 
 call neobundle#end()
