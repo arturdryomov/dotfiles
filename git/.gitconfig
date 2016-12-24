@@ -20,7 +20,7 @@
   default = upstream
 
 [diff]
-  compactionHeuristic = true
+  indentHeuristic = true
 
 [pager]
   log = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
