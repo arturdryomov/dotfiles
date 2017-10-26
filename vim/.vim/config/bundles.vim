@@ -22,6 +22,7 @@ NeoBundle "vim-airline/vim-airline-themes"
 NeoBundle "chriskempson/tomorrow-theme", {"rtp": "vim/"}
 
 " Syntax
+NeoBundle "ekalinin/Dockerfile.vim"
 NeoBundle "markcornick/vim-vagrant"
 NeoBundle "tfnico/vim-gradle"
 NeoBundle "tpope/vim-markdown"
