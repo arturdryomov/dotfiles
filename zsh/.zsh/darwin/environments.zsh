@@ -5,7 +5,7 @@ export PATH="${BREW_HOME}/bin:${BREW_HOME}/sbin:${PATH}"
 
 # Homebrew Cask
 
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=${BREW_HOME}/Caskroom"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Android SDK
 
