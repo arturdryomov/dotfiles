@@ -4,12 +4,12 @@
 
 1. Bootstrap.
 
-  ```
-  $ make install
-  ```
+    ```
+    $ make install
+    ```
 
 2. Set personal information.
 
-  ```
-  $ vim git/.gitconfig
-  ```
+    ```
+    $ vim git/.gitconfig
+    ```
