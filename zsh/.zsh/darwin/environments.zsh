@@ -9,7 +9,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Android SDK
 
-export ANDROID_HOME="${BREW_HOME}/opt/android-sdk/"
+export ANDROID_HOME="${BREW_HOME}/share/android-sdk/"
 
 # Maven
 
