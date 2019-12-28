@@ -19,9 +19,6 @@
 [push]
   default = upstream
 
-[diff]
-  indentHeuristic = true
-
 [pager]
   log = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
   show = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
