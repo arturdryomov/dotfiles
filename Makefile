@@ -6,9 +6,6 @@ all:
 install:
 	ln -sf $(CURDIR)/git/.gitconfig $(HOME)/.
 	ln -sf $(CURDIR)/git/.gitignore $(HOME)/.
-	ln -sf $(CURDIR)/python/.pythonrc.py $(HOME)/.
-	ln -sf $(CURDIR)/sqlite/.sqliterc $(HOME)/.
-	ln -sf $(CURDIR)/tmux/.tmux.conf $(HOME)/.
 	ln -sf $(CURDIR)/vim/.gvimrc $(HOME)/.
 	ln -sf $(CURDIR)/vim/.vim $(HOME)/.
 	ln -sf $(CURDIR)/vim/.vimrc $(HOME)/.
@@ -24,9 +21,6 @@ post-install-vim:
 clean:
 	rm -rf $(HOME)/.gitconfig
 	rm -rf $(HOME)/.gitignore
-	rm -rf $(HOME)/.pythonrc.py
-	rm -rf $(HOME)/.sqliterc
-	rm -rf $(HOME)/.tmux.conf
 	rm -rf $(HOME)/.gvimrc
 	rm -rf $(HOME)/.vim
 	rm -rf $(HOME)/.vimrc
