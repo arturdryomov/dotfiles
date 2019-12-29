@@ -2,6 +2,7 @@
 
 vim/.vim/.netrwhist
 
-vim/.vim/bundle/
+vim/.vim/autoload/
 vim/.vim/history/
+vim/.vim/plug/
 vim/.vim/spell/
