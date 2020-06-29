@@ -3,20 +3,23 @@ set -eou pipefail
 
 # Git
 
-ln -sf git/.gitconfig ${HOME}/.
-ln -sf git/.gitignore ${HOME}/.
+ln -sf ${PWD}/git/.gitconfig ${HOME}/.
+ln -sf ${PWD}/git/.gitignore ${HOME}/.
 
 # Vim
 
-ln -sf vim/.gvimrc ${HOME}/.
-ln -sf vim/.vim ${HOME}/.
-ln -sf vim/.vimrc ${HOME}/.
+ln -sf ${PWD}/vim/.gvimrc ${HOME}/.
+ln -sf ${PWD}/vim/.vim ${HOME}/.
+ln -sf ${PWD}/vim/.vimrc ${HOME}/.
 
-curl --location "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" --output "${HOME}/.vim/autoload/plug.vim" --create-dirs
+curl \
+  --location "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" \
+  --output "vim/.vim/autoload/plug.vim" \
+  --create-dirs
 
 mkdir -p vim/.vim/history/
 
 # Zsh
 
-ln -sf zsh/.zsh ${HOME}/.
-ln -sf zsh/.zshrc ${HOME}/.
+ln -sf ${PWD}/zsh/.zsh ${HOME}/.
+ln -sf ${PWD}/zsh/.zshrc ${HOME}/.
