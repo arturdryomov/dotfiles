@@ -19,7 +19,11 @@
 [push]
   default = upstream
 
+[pull]
+  rebase = true
+
 [pager]
   log = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
   show = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
   diff = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
+
