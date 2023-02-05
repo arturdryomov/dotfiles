@@ -1,44 +1,22 @@
-# IDE
-
-## IntelliJ IDEA
+# IntelliJ IDEA
 
 .idea/
 *.iml
 
-## Qt Creator
-
-*.user
-
-## Xcode
-
-xcuserdata/
-*.xcworkspace
-
-# Build tools
-
-## Gradle
+# Gradle
 
 .gradle/
 build/
 
-## Maven
+# Maven
 
 target/
 
-# Other
-
-## Android
-
-*.apk
-*.keystore
-
-local.properties
-
-## OS X
+# macOS
 
 .DS_Store
 
-## Python
+# Python
 
 *.pyc
 *.pyo

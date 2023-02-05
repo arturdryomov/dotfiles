@@ -1,29 +1,19 @@
 [user]
-  name = Artur Dryomov
-  email = artur.dryomov@gmail.com
+  name = "Artur Dryomov"
 
 [core]
-  editor = vim
-  pager = less
-  excludesfile = ~/.gitignore
-
-[color]
-  ui = auto
-
-[help]
-  autocorrect = 1
+  editor = "vim"
+  pager = "less"
+  excludesFile = "${HOME}/.gitignore"
 
 [advice]
   statusHints = false
 
+[help]
+  autocorrect = "prompt"
+
 [push]
-  default = upstream
+  default = "upstream"
 
 [pull]
   rebase = true
-
-[pager]
-  log = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
-  show = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
-  diff = ${BREW_HOME}/share/git-core/contrib/diff-highlight/diff-highlight | less
-
