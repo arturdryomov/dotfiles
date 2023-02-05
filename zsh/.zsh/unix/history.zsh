@@ -1,26 +1,29 @@
-# History file
+# File path
 HISTFILE="${HOME}/.zsh_history"
 
-# Number of commands in history
+# Size at RAM
 HISTSIZE=10000
 
-# Number of commands in launch
-SAVEHIST=10000
+# Size at file
+HISTFILESIZE=10000
 
-# Append history, do not overwrite it
-setopt append_history
+# Append the file instead of replacing it
+setopt APPEND_HISTORY
 
-# Ignore duplicate commands
-setopt hist_ignore_all_dups
+# Append the file ASAP
+setopt INC_APPEND_HISTORY
 
-# Ignore spaces
-setopt hist_ignore_space
+# Avoid duplicates during navigation and search
+setopt HIST_FIND_NO_DUPS
 
-# Ignore blank lines
-setopt hist_reduce_blanks
+# Avoid writing duplicates to the file
+setopt HIST_IGNORE_ALL_DUPS
 
-# Always import new commands from history
-setopt share_history
+# Avoid writing spaces to the file
+setopt HIST_IGNORE_SPACE
 
-# Write command to history after pressing Enter
-setopt inc_append_history
+# Avoid writing blanks to the file
+setopt HIST_REDUCE_BLANKS
+
+# Pick commands from the file ASAP
+setopt SHARE_HISTORY

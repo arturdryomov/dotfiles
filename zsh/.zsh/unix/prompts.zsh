@@ -1,35 +1,34 @@
-# Left prompt
+autoload -Uz vcs_info
 
-PROMPT="%B[%~] → %b"
+# Include Git, nothing else
+zstyle ":vcs_info:*" enable git
 
+# Include branch, nothing else
+zstyle ":vcs_info:*" formats "%b"
 
-# Right prompt
+PROMPT="%B[%~]%b "
 
 precmd() {
-  set_right_prompt
+  RPROMPT="$(_resolve_git_prompt)"
 }
 
-function set_right_prompt() {
-  git_branch_name=$(git_branch)
+function _resolve_git_prompt() {
+  git_branch="$(_resolve_git_branch)"
 
-  if [ -z ${git_branch_name} ]; then
-    export RPROMPT=""
+  if [[ -z "${git_branch}" ]]; then
+    echo ""
   else
-    export RPROMPT="%B[± ${git_branch_name}]%b"
+    echo "%B[± ${git_branch}]%b"
   fi
 }
 
-function git_branch() {
+function _resolve_git_branch() {
   vcs_info
 
-  echo ${vcs_info_msg_0_}
+  echo "${vcs_info_msg_0_}"
 }
 
-## Set up Zsh VCS module
-autoload -Uz vcs_info
+SPROMPT="Change '%R' to '%r'?: "
 
-### Allow only Git information
-zstyle ":vcs_info:*" enable git
-
-### Print VCS information only as branch
-zstyle ":vcs_info:*" formats "%b"
+# Remove the RPROMPT right indent
+ZLE_RPROMPT_INDENT=0

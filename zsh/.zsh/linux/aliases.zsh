@@ -1,6 +1,6 @@
 # Common
 
-## Package management
+## Packages
 
 alias p="pacman"
 alias y="yaourt"
@@ -16,7 +16,7 @@ alias off="systemctl poweroff"
 alias reboot="systemctl reboot"
 alias hide="systemctl suspend"
 
-## Other
+## Integrations
 
 alias open="xdg-open"
 
