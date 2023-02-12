@@ -1,10 +1,3 @@
-" SuperTab
-
-" Aware context completion
-
-let g:SuperTabDefaultCompletionType = "context"
-
-
 " Airline
 
 set timeout timeoutlen=1000 ttimeoutlen=50
@@ -18,8 +11,8 @@ function AirlineSectionComponentsX()
   let components = []
 
   let file_type = "%{&filetype}"
-  let file_encoding = "%{&fenc}"
-  let file_format = &fileformat
+  let file_encoding = "%{&fileencoding}"
+  let file_format = "%{&fileformat}"
 
   if !empty(file_type)
     call add(components, file_type)
@@ -48,3 +41,5 @@ let g:airline#extensions#whitespace#checks = ["indent", "trailing"]
 let g:airline#extensions#whitespace#symbol = "…"
 let g:airline#extensions#whitespace#mixed_indent_format = "at %s"
 let g:airline#extensions#whitespace#trailing_format = "at %s"
+
+let g:airline_symbols_ascii = 1

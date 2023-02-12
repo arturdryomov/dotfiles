@@ -1,9 +1,0 @@
-runtime! config/bundles.vim
-runtime! config/plugins.vim
-runtime! config/basics.vim
-runtime! config/appearence.vim
-runtime! config/search.vim
-runtime! config/tabulation.vim
-runtime! config/editing.vim
-runtime! config/mappings.vim
-runtime! config/filetypes.vim
