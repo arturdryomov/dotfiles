@@ -12,6 +12,11 @@ set noswapfile
 "" Avoid undo files
 set noundofile
 
+" Mode
+
+"" Change switch timings
+set timeout timeoutlen=1000 ttimeoutlen=50
+
 " Mode: Insert
 
 "" Enable backspace
