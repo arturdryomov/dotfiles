@@ -13,6 +13,7 @@
   autocorrect = "prompt"
 
 [push]
+  autoSetupRemote = true
   default = "upstream"
 
 [pull]
