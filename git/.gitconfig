@@ -6,6 +6,9 @@
   pager = "less"
   excludesFile = "${HOME}/.gitignore"
 
+[diff]
+  colorMoved = "dimmed-zebra"
+
 [advice]
   statusHints = false
 
