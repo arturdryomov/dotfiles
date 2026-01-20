@@ -38,8 +38,17 @@ set spelllang=en_us
 "" Enable highlighting
 syntax enable
 
+"" Change highlighting theme (fallback)
+colorscheme retrobox
+
 "" Change highlighting theme
-colorscheme Tomorrow-Night
+set termguicolors
+
+let g:lumen_light_colorscheme = "base16-tomorrow"
+let g:lumen_dark_colorscheme = "base16-tomorrow-night"
+
+"" base16-* colorschemes
+let g:tinted_italic = 0
 
 "" Enable mouse navigation
 set mouse=a

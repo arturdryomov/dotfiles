@@ -1,7 +1,8 @@
 let g:airline_symbols_ascii = 1
-let g:airline_theme="tomorrow"
+let g:airline_theme = "base16"
 
-let g:airline#extensions#whitespace#enabled = 1
+let g:airline_extensions = ['whitespace']
+
 let g:airline#extensions#whitespace#symbol = "\u23b5"
 let g:airline#extensions#whitespace#checks = ["trailing"]
 let g:airline#extensions#whitespace#trailing_format = "%s"

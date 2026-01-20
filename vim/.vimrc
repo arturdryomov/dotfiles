@@ -1,14 +1,12 @@
 set nocompatible
 
-call plug#begin('~/.vim/plug')
+call plug#begin('$HOME/.vim/plug')
 
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'tinted-theming/tinted-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Colorschemes
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plug 'vimpostor/vim-lumen'
 
 call plug#end()
