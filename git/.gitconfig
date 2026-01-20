@@ -1,23 +1,28 @@
-[user]
-  name = "Artur Dryomov"
-
-[core]
-  editor = "vim"
-  pager = "less"
-  excludesFile = "${HOME}/.gitignore"
-
-[diff]
-  colorMoved = "dimmed-zebra"
-
 [advice]
   statusHints = false
 
+[core]
+  editor = "vim"
+  excludesFile = "${HOME}/.gitignore"
+  pager = "less"
+
+[diff]
+  algorithm = "histogram"
+  colorMoved = "dimmed-zebra"
+
+[fetch]
+  prune = true
+  pruneTags = true
+
 [help]
   autocorrect = "prompt"
+
+[pull]
+  rebase = true
 
 [push]
   autoSetupRemote = true
   default = "upstream"
 
-[pull]
-  rebase = true
+[user]
+  name = "Artur Dryomov"
