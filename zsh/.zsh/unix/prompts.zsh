@@ -15,7 +15,7 @@ ZLE_RPROMPT_INDENT=0
 
 # L
 
-PROMPT="%B[%~]%b → "
+PROMPT="%B[%~] → %b"
 
 # Spelling
 
