@@ -27,6 +27,11 @@ set linebreak
 "" Show file tree
 map <Leader>t :NERDTreeToggle<cr>
 
+augroup nerdtree
+  autocmd!
+  autocmd CmdUndefined NERDTreeToggle packadd nerdtree
+augroup END
+
 "" Show special characters
 map <Leader>c :setlocal invlist<cr>
 set listchars=tab:\\u2023\ ,eol:\\u23ce,nbsp:\\u23b5,lead:\\u2022,trail:\\u2022

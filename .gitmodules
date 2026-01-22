@@ -1,0 +1,23 @@
+[submodule "vim-airline"]
+	path = vim/.vim/pack/git/start/airline
+	url = https://github.com/vim-airline/vim-airline.git
+
+[submodule "vim-airline-themes"]
+	path = vim/.vim/pack/git/start/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+
+[submodule "vim-nerdcommenter"]
+	path = vim/.vim/pack/git/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+
+[submodule "vim-nerdtree"]
+	path = vim/.vim/pack/git/opt/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+
+[submodule "vim-lumen"]
+	path = vim/.vim/pack/git/start/lumen
+	url = https://github.com/vimpostor/vim-lumen.git
+
+[submodule "vim-tint"]
+	path = vim/.vim/pack/git/opt/tint
+	url = https://github.com/tinted-theming/tinted-vim.git
