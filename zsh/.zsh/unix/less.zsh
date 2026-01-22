@@ -12,4 +12,4 @@ export LESS_TERMCAP_ue="$(tput sgr0)"
 
 # History
 
-export LESSHISTFILE="${HOME}/.less_history"
+export LESSHISTFILE="/dev/null"
