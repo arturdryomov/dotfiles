@@ -8,7 +8,6 @@ ln -sf ${PWD}/git/.gitignore ${HOME}/.
 
 # Vim
 
-ln -sf ${PWD}/vim/.gvimrc ${HOME}/.
 ln -sf ${PWD}/vim/.vim ${HOME}/.
 ln -sf ${PWD}/vim/.vimrc ${HOME}/.
 
