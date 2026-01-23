@@ -25,14 +25,6 @@ set backspace=indent,eol,start
 "" Show completion options as menu
 set completeopt=menu,menuone
 
-" Mode: Normal
-
-"" Insert new line forward with Shift+L
-map <S-l> o<Esc>
-
-"" Insert new line backward with Ctrl+L
-map <C-l> O<Esc>
-
 " Mode: Visual
 
 "" Keep selection on indentation

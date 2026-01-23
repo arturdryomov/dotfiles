@@ -25,7 +25,7 @@ set colorcolumn=100
 set linebreak
 
 "" Show file tree
-map <Leader>t :NERDTreeToggle<cr>
+nnoremap <Leader>t :NERDTreeToggle<cr>
 
 augroup nerdtree
   autocmd!
@@ -33,11 +33,11 @@ augroup nerdtree
 augroup END
 
 "" Show special characters
-map <Leader>c :setlocal invlist<cr>
+nnoremap <Leader>c :setlocal list!<cr>
 set listchars=tab:\\u2023\ ,eol:\\u23ce,nbsp:\\u23b5,lead:\\u2022,trail:\\u2022
 
 "" Show spellcheck
-map <Leader>l :setlocal invspell<cr>
+nnoremap <Leader>l :setlocal spell!<cr>
 set spelllang=en_us
 
 "" Enable highlighting
