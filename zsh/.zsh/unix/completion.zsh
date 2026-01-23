@@ -1,7 +1,7 @@
 autoload -Uz compinit; compinit
 
 # Navigate options as menu ASAP
-zstyle ":completion:*" menu select=0
+zstyle ":completion:*" menu select
 
 # Present options as groups
 zstyle ":completion:*" group-name ""

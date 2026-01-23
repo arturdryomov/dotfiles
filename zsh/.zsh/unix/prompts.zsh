@@ -20,4 +20,3 @@ PROMPT="%B[%~] → %b"
 # Spelling
 
 SPROMPT="Change %B%R%b to %B%r%b?: "
-

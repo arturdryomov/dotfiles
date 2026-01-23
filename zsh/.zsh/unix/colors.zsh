@@ -1,8 +1,7 @@
 # Commands
 
-alias grep="grep --color=always"
-alias ls="ls --color=always"
-alias tree="tree -C"
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
 
 # "zsh-syntax-highlighting"
 

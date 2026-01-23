@@ -1,17 +1,17 @@
-ZSH_HOME="${HOME}/.zsh"
-
 function source_configs() {
-  foreach CONFIG_PATH in ${ZSH_HOME}/${1}/*.zsh; do
-    source "${CONFIG_PATH}"
+  local configs_path="${HOME}/.zsh/${1}"
+
+  for config_path in "${configs_path}"/*.zsh(N); do
+    source "${config_path}"
   done
 }
 
-case "$(uname)" in
-  "Darwin")
+case "${OSTYPE}" in
+  darwin*)
     source_configs "darwin"
     source_configs "unix"
     ;;
-  "Linux")
+  linux*)
     source_configs "linux"
     source_configs "unix"
     ;;
