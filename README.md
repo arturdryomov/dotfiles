@@ -18,20 +18,20 @@
 
 ### Vim
 
-To install a package:
+* To install a package:
 
-```
-git submodule add --name vim-NAME URL vim/.vim/pack/git/{opt,start}/NAME
-```
+    ```
+    git submodule add --name vim-NAME URL vim/.vim/pack/git/{opt,start}/NAME
+    ```
 
-To remove a package:
+* To remove a package:
 
-```
-git rm vim/.vim/pack/git/{opt,start}/NAME
-```
+    ```
+    git rm vim/.vim/pack/git/{opt,start}/NAME
+    ```
 
-To update packages:
+* To update packages:
 
-```
-git submodule update --remote --recursive
-```
+    ```
+    git submodule update --remote --recursive
+    ```
