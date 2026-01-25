@@ -1,17 +1,3 @@
-# IntelliJ IDEA
-
-.idea/
-*.iml
-
-# Gradle
-
-.gradle/
-build/
-
-# Maven
-
-target/
-
 # macOS
 
 .DS_Store
