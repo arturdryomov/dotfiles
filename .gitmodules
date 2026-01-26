@@ -1,11 +1,3 @@
-[submodule "vim-airline"]
-	path = vim/.vim/pack/git/start/airline
-	url = https://github.com/vim-airline/vim-airline.git
-
-[submodule "vim-airline-themes"]
-	path = vim/.vim/pack/git/start/airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
-
 [submodule "vim-nerdcommenter"]
 	path = vim/.vim/pack/git/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
