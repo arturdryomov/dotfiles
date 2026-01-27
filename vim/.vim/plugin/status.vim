@@ -23,6 +23,16 @@ function! FormatStatusMode() abort
   return toupper(get(s:statusmodes, mode(), mode()))
 endfunction
 
+function! HighStatusFilePath() abort
+  if &readonly
+    return "%#DiagnosticFloatingError#"
+  elseif &modified
+    return "%#DiagnosticFloatingWarn#"
+  else
+    return "%#StatusLine#"
+  endif
+endfunction
+
 function! FormatStatusFileFlags() abort
   let l:type = empty(&filetype) ? "no type" : &filetype
   let l:encoding = empty(&fileencoding) ? "no encoding" : &fileencoding
@@ -39,7 +49,7 @@ set statusline+=%{FormatStatusSegment(FormatStatusMode())}
 set statusline+=%*
 
 " File path
-set statusline+=%{%&modified?'%#DiagnosticFloatingWarn#':'%#StatusLine#'%}
+set statusline+=%{%HighStatusFilePath()%}
 set statusline+=%{%FormatStatusSegment('%f')%}
 set statusline+=%*
 
