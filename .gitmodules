@@ -2,10 +2,6 @@
 	path = vim/.vim/pack/git/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
 
-[submodule "vim-nerdtree"]
-	path = vim/.vim/pack/git/opt/nerdtree
-	url = https://github.com/preservim/nerdtree.git
-
 [submodule "vim-lumen"]
 	path = vim/.vim/pack/git/start/lumen
 	url = https://github.com/vimpostor/vim-lumen.git

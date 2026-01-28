@@ -24,14 +24,6 @@ set colorcolumn=100
 "" Change wrapping from characters to words
 set linebreak
 
-"" Show file tree
-nnoremap <Leader>t :NERDTreeToggle<cr>
-
-augroup nerdtree
-  autocmd!
-  autocmd CmdUndefined NERDTreeToggle packadd nerdtree
-augroup END
-
 "" Show special characters
 nnoremap <Leader>c :setlocal list!<cr>
 set listchars=tab:\\u2023\ ,eol:\\u23ce,nbsp:\\u23b5,lead:\\u2022,trail:\\u2022
