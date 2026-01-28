@@ -1,6 +1,6 @@
-[submodule "vim-nerdcommenter"]
-	path = vim/.vim/pack/git/start/nerdcommenter
-	url = https://github.com/preservim/nerdcommenter.git
+[submodule "vim-comment"]
+	path = vim/.vim/pack/git/start/comment
+	url = https://github.com/tpope/vim-commentary.git
 
 [submodule "vim-lumen"]
 	path = vim/.vim/pack/git/start/lumen
