@@ -35,14 +35,15 @@ set spelllang=en_us
 "" Enable highlighting
 syntax enable
 
-"" Change highlighting theme
+"" Use GUI colors instead of TUI ones
 set termguicolors
 
+"" Disable italic for base16-* colorschemes
+let g:tinted_italic = 0
+
+"" Change colorscheme on OS changes
 let g:lumen_light_colorscheme = "base16-tomorrow"
 let g:lumen_dark_colorscheme = "base16-tomorrow-night"
-
-"" Disable italic at base16-* colorschemes
-let g:tinted_italic = 0
 
 "" Enable mouse navigation
 set mouse=a
