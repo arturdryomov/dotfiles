@@ -1,6 +1,3 @@
-# File path
-HISTFILE="${HOME}/.zsh_history"
-
 # Size at RAM
 HISTSIZE=10000
 

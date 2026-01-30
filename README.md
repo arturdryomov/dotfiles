@@ -11,7 +11,7 @@
 1. Link files:
 
     ```
-    bash install.sh
+    source zsh/.zshenv && zsh install.zsh
     ```
 
 ## Manage
