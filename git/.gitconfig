@@ -3,7 +3,6 @@
 
 [core]
   editor = "vim"
-  excludesFile = "${HOME}/.gitignore"
   pager = "less"
 
 [diff]
