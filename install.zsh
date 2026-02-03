@@ -24,3 +24,9 @@ mkdir -p "${XDG_CONFIG_HOME}/zsh"
 ln -sf "${PWD}/zsh/.zshenv" "${HOME}/.zshenv"
 ln -sf "${PWD}/zsh/.zshrc" "${XDG_CONFIG_HOME}/zsh/.zshrc"
 ln -sf "${PWD}/zsh/.zsh" "${XDG_CONFIG_HOME}/zsh/.zsh"
+
+# Ghostty
+
+mkdir -p "${XDG_CONFIG_HOME}/ghostty"
+
+ln -sf "${PWD}/ghostty/config" "${XDG_CONFIG_HOME}/ghostty/config"
