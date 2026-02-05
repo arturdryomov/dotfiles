@@ -9,3 +9,6 @@ macos-icon-screen-color = "black"
 macos-option-as-alt = "left"
 
 theme = dark:"Tomorrow Night",light:"Tomorrow"
+
+window-height = 30
+window-width = 90
