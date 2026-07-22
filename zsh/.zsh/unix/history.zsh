@@ -4,6 +4,8 @@ HISTSIZE=10000
 # Size at file
 HISTFILESIZE=10000
 
+HISTFILE="${XDG_DATA_HOME}/zsh/history"
+
 # Append the file instead of replacing it
 setopt APPEND_HISTORY
 
