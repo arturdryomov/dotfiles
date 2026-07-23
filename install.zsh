@@ -24,9 +24,11 @@ ln -sf "${PWD}/vim/.vim/plugin" "${VIM_CONFIG_HOME}/plugin"
 
 # Zsh
 
+ZSH_CACHE_HOME="${XDG_CACHE_HOME}/zsh"
 ZSH_CONFIG_HOME="${XDG_CONFIG_HOME}/zsh"
 ZSH_DATA_HOME="${XDG_DATA_HOME}/zsh"
 
+mkdir -p "${ZSH_CACHE_HOME}"
 mkdir -p "${ZSH_CONFIG_HOME}"
 mkdir -p "${ZSH_DATA_HOME}"
 

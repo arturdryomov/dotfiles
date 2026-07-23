@@ -1,4 +1,8 @@
-autoload -Uz compinit; compinit
+autoload -Uz compinit
+
+compinit -d "${XDG_CACHE_HOME}/zsh/compdump"
+
+zstyle ':completion:*' cache-path "${XDG_CACHE_HOME}/zsh/compcache"
 
 # Navigate options as menu ASAP
 zstyle ":completion:*" menu select
