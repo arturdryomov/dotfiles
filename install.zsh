@@ -7,8 +7,8 @@ GIT_CONFIG_HOME="${XDG_CONFIG_HOME}/git"
 
 mkdir -p "${GIT_CONFIG_HOME}"
 
-ln -sf "${PWD}/git/.gitconfig" "${GIT_CONFIG_HOME}/config"
-ln -sf "${PWD}/git/.gitignore" "${GIT_CONFIG_HOME}/ignore"
+ln -sf "${PWD}/git/config" "${GIT_CONFIG_HOME}/config"
+ln -sf "${PWD}/git/ignore" "${GIT_CONFIG_HOME}/ignore"
 
 # Vim
 
