@@ -1,7 +1,3 @@
-[submodule "vim-comment"]
-	path = vim/.vim/pack/git/start/comment
-	url = https://github.com/tpope/vim-commentary.git
-
 [submodule "vim-lumen"]
 	path = vim/.vim/pack/git/start/lumen
 	url = https://github.com/vimpostor/vim-lumen.git
