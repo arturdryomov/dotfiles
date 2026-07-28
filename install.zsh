@@ -6,7 +6,7 @@ function install() {
   local PATH_DSC="${2}"
 
   mkdir -p "$(dirname "${PATH_DSC}")"
-  ln -sfh "${PATH_SRC}" "${PATH_DSC}"
+  ln -sfn "${PATH_SRC}" "${PATH_DSC}"
 }
 
 # Git
