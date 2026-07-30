@@ -1,22 +1,16 @@
+HISTFILE="${XDG_DATA_HOME}/zsh/history"
+
 # Size at RAM
 HISTSIZE=10000
 
 # Size at file
 SAVEHIST=10000
 
-HISTFILE="${XDG_DATA_HOME}/zsh/history"
-
-# Append the file instead of replacing it
-setopt APPEND_HISTORY
-
-# Append the file ASAP
-setopt INC_APPEND_HISTORY
-
 # Avoid duplicates during navigation and search
 setopt HIST_FIND_NO_DUPS
 
 # Avoid writing duplicates to the file
-setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
 
 # Avoid writing spaces to the file
 setopt HIST_IGNORE_SPACE
@@ -24,5 +18,5 @@ setopt HIST_IGNORE_SPACE
 # Avoid writing blanks to the file
 setopt HIST_REDUCE_BLANKS
 
-# Pick commands from the file ASAP
+# Read and write commands ASAP
 setopt SHARE_HISTORY
