@@ -1,7 +1,7 @@
 function source_configs() {
-  local configs_path="${ZDOTDIR}/.zsh/${1}"
+  local config_path
 
-  for config_path in "${configs_path}"/*.zsh(N); do
+  for config_path in "${ZDOTDIR}/.zsh/${1}"/*.zsh(N); do
     source "${config_path}"
   done
 }
@@ -16,3 +16,5 @@ case "${OSTYPE}" in
     source_configs "unix"
     ;;
 esac
+
+unfunction source_configs
