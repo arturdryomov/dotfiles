@@ -2,4 +2,4 @@
 REPORTTIME=60
 
 # Report time format
-export TIMEFMT=$'%E (user: %U, kernel: %S)'
+TIMEFMT=$'%E (user: %U, kernel: %S)'
