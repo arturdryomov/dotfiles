@@ -4,11 +4,20 @@
 ## https://unix.stackexchange.com/a/108840
 ## https://unix.stackexchange.com/a/269085
 
-export LESS_TERMCAP_md="$(tput bold; tput setaf 4)"
-export LESS_TERMCAP_me="$(tput sgr0)"
+() {
+  local color_blue=4
 
-export LESS_TERMCAP_us="$(tput bold; tput setaf 4)"
-export LESS_TERMCAP_ue="$(tput sgr0)"
+  local style_setup="${terminfo[bold]}$(echoti setaf ${color_blue})"
+  local style_reset="${terminfo[sgr0]}"
+
+  ## Bold
+  export LESS_TERMCAP_md="${style_setup}"
+  export LESS_TERMCAP_me="${style_reset}"
+
+  ## Underline
+  export LESS_TERMCAP_us="${style_setup}"
+  export LESS_TERMCAP_ue="${style_reset}"
+}
 
 # History
 
