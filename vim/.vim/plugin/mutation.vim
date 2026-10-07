@@ -25,8 +25,3 @@ set backspace=indent,eol,start
 "" Show completion options as menu
 set completeopt=menu,menuone
 
-" Mode: Visual
-
-"" Keep selection on indentation
-vmap < <gv
-vmap > >gv
