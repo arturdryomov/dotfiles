@@ -61,5 +61,5 @@ set statusline+=%{FormatStatusSegment(FormatStatusFileFlags())}
 
 " File line and column
 set statusline+=%#TabLineSel#
-set statusline+=%{%FormatStatusSegment('%3l:%3c')%}
+set statusline+=%{%FormatStatusSegment('%3l:%3v')%}
 set statusline+=%*
