@@ -28,11 +28,11 @@ set colorcolumn=100
 set linebreak
 
 "" Show special characters
-nnoremap <Leader>c :setlocal list!<cr>
+nnoremap <Leader>c <Cmd>setlocal list!<CR>
 set listchars=tab:\\u2023\ ,eol:\\u23ce,nbsp:\\u23b5,lead:\\u2022,trail:\\u2022
 
 "" Show spellcheck
-nnoremap <Leader>l :setlocal spell!<cr>
+nnoremap <Leader>l <Cmd>setlocal spell!<CR>
 set spelllang=en_us
 
 "" Enable highlighting
