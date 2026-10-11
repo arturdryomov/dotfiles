@@ -1,8 +1,5 @@
 " Files
 
-"" Change default encoding to UTF-8
-set encoding=utf-8
-
 "" Avoid backup files
 set nobackup
 
