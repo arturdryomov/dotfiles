@@ -1,10 +1,10 @@
 HISTFILE="${XDG_DATA_HOME}/zsh/history"
 
 # Size at RAM
-HISTSIZE=10000
+HISTSIZE=100000
 
 # Size at file
-SAVEHIST=10000
+SAVEHIST=100000
 
 # Avoid duplicates during navigation and search
 setopt HIST_FIND_NO_DUPS
