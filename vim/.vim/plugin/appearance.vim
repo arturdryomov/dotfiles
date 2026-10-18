@@ -51,9 +51,6 @@ let g:lumen_dark_colorscheme = "base16-tomorrow-night"
 "" Enable mouse navigation
 set mouse=a
 
-"" Hide mouse when typing
-set mousehide
-
 "" Change scroll buffer to 5 lines
 set scrolljump=5 scrolloff=5
 
