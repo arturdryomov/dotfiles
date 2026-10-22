@@ -1,6 +1,9 @@
 " Hide banner
 let g:netrw_banner = 0
 
+" Disable history and bookmarks
+let g:netrw_dirhistmax = 0
+
 " Show files with timestamps and sizes
 let g:netrw_liststyle = 1
 
