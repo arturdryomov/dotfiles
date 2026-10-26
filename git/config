@@ -20,7 +20,6 @@
 
 [push]
   autoSetupRemote = true
-  default = "upstream"
 
 [user]
   name = "Artur Dryomov"
