@@ -38,3 +38,9 @@ install "${PWD}/zsh/.zsh" "${XDG_CONFIG_HOME}/zsh/.zsh"
 
 mkdir -p "${XDG_CACHE_HOME}/zsh"
 mkdir -p "${XDG_DATA_HOME}/zsh"
+
+# macOS
+
+## Suppress interactive shell intro messages
+
+touch "${HOME}/.hushlogin"
