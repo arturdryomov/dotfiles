@@ -1,4 +1,4 @@
-HISTFILE="${XDG_DATA_HOME}/zsh/history"
+HISTFILE="${XDG_STATE_HOME}/zsh/history"
 
 # Size at RAM
 HISTSIZE=100000

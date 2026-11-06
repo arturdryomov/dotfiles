@@ -37,7 +37,7 @@ install "${PWD}/zsh/.zsh" "${XDG_CONFIG_HOME}/zsh/.zsh"
 ## See "zsh/.zsh/unix/completion.zsh"
 
 mkdir -p "${XDG_CACHE_HOME}/zsh"
-mkdir -p "${XDG_DATA_HOME}/zsh"
+mkdir -p "${XDG_STATE_HOME}/zsh"
 
 # macOS
 
