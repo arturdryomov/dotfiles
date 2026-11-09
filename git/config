@@ -22,4 +22,7 @@
   autoSetupRemote = true
 
 [user]
-  name = "Artur Dryomov"
+  useConfigOnly = true
+
+[include]
+  path = "user"

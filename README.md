@@ -16,6 +16,14 @@
 
 ## Manage
 
+### Git
+
+* To configure a user, use the dedicated file for the `[user]` section:
+
+    ```
+    vim "${XDG_CONFIG_HOME}/git/user"
+    ```
+
 ### Vim
 
 * To install a package:
