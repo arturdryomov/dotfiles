@@ -1,7 +1,11 @@
+" Messages
+
 "" Hide the intro screen
 set shortmess+=I
+
 "" Abbreviate messages
 set shortmess+=a
+
 "" Show the search counter
 set shortmess-=S
 
